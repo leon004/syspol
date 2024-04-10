@@ -1,0 +1,12 @@
+<mat-list class="historical-list">
+  <div *ngFor="let entry of historicalData">
+    <mat-list-item class="historical-entry">
+      <div class="entry-content">
+        <h3>{{ entry.folio }}</h3>
+        <p><mat-icon>description</mat-icon>{{ entry.code }}</p>
+        <p><mat-icon>calendar_today</mat-icon>{{ entry.date }}</p>
+      </div>
+    </mat-list-item>
+  </div>
+</mat-list>
+<app-bottom-nav></app-bottom-nav>

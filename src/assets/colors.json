@@ -1,0 +1,13 @@
+[
+  { "name": "Negro", "hex": "#000000" },
+  { "name": "Azul", "hex": "#0000FF" },
+  { "name": "Celeste", "hex": "#00FFFF" },
+  { "name": "Gris", "hex": "#808080" },
+  { "name": "Verde", "hex": "#008000" },
+  { "name": "Rojo", "hex": "#FF0000" },
+  { "name": "Amarillo", "hex": "#FFFF00" },
+  { "name": "Morado", "hex": "#800080" },
+  { "name": "Naranja", "hex": "#FFA500" },
+  { "name": "Lima", "hex": "#00FF00" }
+
+]

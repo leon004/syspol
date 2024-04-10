@@ -1,0 +1,1140 @@
+[
+  {
+      "id_fraccion": 1,
+      "tipo": 1
+  },
+  {
+      "id_fraccion": 2,
+      "fraccion": "I",
+      "tipo": 2
+  },
+  {
+      "id_fraccion": 3,
+      "fraccion": "IV",
+      "tipo": 3
+  },
+  {
+      "id_fraccion": 4,
+      "fraccion": "XI",
+      "tipo": 4
+  },
+  {
+      "id_fraccion": 5,
+      "fraccion": "XIV",
+      "tipo": 5
+  },
+  {
+      "id_fraccion": 6,
+      "fraccion": "XVI",
+      "tipo": 6
+  },
+  {
+      "id_fraccion": 7,
+      "fraccion": "XVIII",
+      "tipo": 7
+  },
+  {
+      "id_fraccion": 8,
+      "fraccion": "V Lugares no autorizados, ",
+      "tipo": 8
+  },
+  {
+      "id_fraccion": 9,
+      "fraccion": "VI en segunda o mas filas.",
+      "tipo": 8
+  },
+  {
+      "id_fraccion": 10,
+      "fraccion": "VII",
+      "tipo": 9
+  },
+  {
+      "id_fraccion": 11,
+      "fraccion": "II",
+      "tipo": 10
+  },
+  {
+      "id_fraccion": 12,
+      "fraccion": "III No portar permiso.",
+      "tipo": 11
+  },
+  {
+      "id_fraccion": 13,
+      "fraccion": "V Fuera de horario.",
+      "tipo": 11
+  },
+  {
+      "id_fraccion": 14,
+      "fraccion": "VII",
+      "tipo": 12
+  },
+  {
+      "id_fraccion": 15,
+      "fraccion": "III",
+      "tipo": 13
+  },
+  {
+      "id_fraccion": 16,
+      "fraccion": "IV",
+      "tipo": 14
+  },
+  {
+      "id_fraccion": 17,
+      "tipo": 15
+  },
+  {
+      "id_fraccion": 18,
+      "fraccion": "I",
+      "tipo": 16
+  },
+  {
+      "id_fraccion": 19,
+      "fraccion": "III",
+      "tipo": 17
+  },
+  {
+      "id_fraccion": 20,
+      "tipo": 18
+  },
+  {
+      "id_fraccion": 21,
+      "fraccion": "IV",
+      "tipo": 19
+  },
+  {
+      "id_fraccion": 22,
+      "tipo": 20
+  },
+  {
+      "id_fraccion": 23,
+      "fraccion": "XVI",
+      "tipo": 21
+  },
+  {
+      "id_fraccion": 24,
+      "fraccion": "XX",
+      "tipo": 22
+  },
+  {
+      "id_fraccion": 25,
+      "fraccion": "XXVIII Y XXIX",
+      "tipo": 23
+  },
+  {
+      "id_fraccion": 26,
+      "fraccion": "II",
+      "tipo": 24
+  },
+  {
+      "id_fraccion": 27,
+      "fraccion": "III",
+      "tipo": 25
+  },
+  {
+      "id_fraccion": 28,
+      "fraccion": "IV",
+      "tipo": 26
+  },
+  {
+      "id_fraccion": 29,
+      "fraccion": "VI",
+      "tipo": 27
+  },
+  {
+      "id_fraccion": 30,
+      "fraccion": "VI",
+      "tipo": 28
+  },
+  {
+      "id_fraccion": 31,
+      "fraccion": "VII",
+      "tipo": 29
+  },
+  {
+      "id_fraccion": 32,
+      "fraccion": "VIII",
+      "tipo": 30
+  },
+  {
+      "id_fraccion": 33,
+      "fraccion": "XIII",
+      "tipo": 31
+  },
+  {
+      "id_fraccion": 34,
+      "fraccion": "XIV",
+      "tipo": 32
+  },
+  {
+      "id_fraccion": 35,
+      "fraccion": "XV",
+      "tipo": 33
+  },
+  {
+      "id_fraccion": 36,
+      "fraccion": "XVI",
+      "tipo": 34
+  },
+  {
+      "id_fraccion": 37,
+      "fraccion": "XVII",
+      "tipo": 35
+  },
+  {
+      "id_fraccion": 38,
+      "fraccion": "V",
+      "tipo": 36
+  },
+  {
+      "id_fraccion": 39,
+      "fraccion": "I",
+      "tipo": 37
+  },
+  {
+      "id_fraccion": 40,
+      "fraccion": "II",
+      "tipo": 38
+  },
+  {
+      "id_fraccion": 41,
+      "fraccion": "III",
+      "tipo": 39
+  },
+  {
+      "id_fraccion": 42,
+      "fraccion": "VII",
+      "tipo": 40
+  },
+  {
+      "id_fraccion": 43,
+      "fraccion": "IX",
+      "tipo": 41
+  },
+  {
+      "id_fraccion": 44,
+      "tipo": 42
+  },
+  {
+      "id_fraccion": 45,
+      "tipo": 43
+  },
+  {
+      "id_fraccion": 46,
+      "fraccion": "I Prioridad de paso intersecciones con semaforo en destello",
+      "tipo": 44
+  },
+  {
+      "id_fraccion": 47,
+      "fraccion": "II. Alto en esquina con senalamiento.",
+      "tipo": 44
+  },
+  {
+      "id_fraccion": 48,
+      "fraccion": "III. Ceder el paso a los peatones que esten cruzando",
+      "tipo": 44
+  },
+  {
+      "id_fraccion": 49,
+      "fraccion": "IV. Prioridad de paso en esquinas, todas con senal de alto.",
+      "tipo": 44
+  },
+  {
+      "id_fraccion": 50,
+      "fraccion": "I. Avenidas sobre las calles ",
+      "tipo": 45
+  },
+  {
+      "id_fraccion": 51,
+      "fraccion": "II. La calle o avenida que tenga mayor amplitud de circulacion,",
+      "tipo": 45
+  },
+  {
+      "id_fraccion": 52,
+      "fraccion": "III. En intersecciones en forma de, la que tenga continuidad sobre la que topa,",
+      "tipo": 45
+  },
+  {
+      "id_fraccion": 53,
+      "fraccion": "IV. La calle pavimentada sobre la no pavimentada,",
+      "tipo": 45
+  },
+  {
+      "id_fraccion": 54,
+      "fraccion": "V. Glorietas.",
+      "tipo": 45
+  },
+  {
+      "id_fraccion": 55,
+      "fraccion": "I. Circular por carril de la derecha.",
+      "tipo": 46
+  },
+  {
+      "id_fraccion": 56,
+      "fraccion": "II. Camiones y autobuses de pasajeros y los vehiculos de carga pesada, deberan hacerlo siempre por el carril de la derecha.",
+      "tipo": 46
+  },
+  {
+      "id_fraccion": 57,
+      "fraccion": "III. carril de desaceleracion, debera utilizarse para dar vuelta hacia la izquierda.",
+      "tipo": 46
+  },
+  {
+      "id_fraccion": 58,
+      "fraccion": "I Y II",
+      "tipo": 47
+  },
+  {
+      "id_fraccion": 59,
+      "fraccion": "I, II, III, IV, V, VI, VII",
+      "tipo": 48
+  },
+  {
+      "id_fraccion": 60,
+      "fraccion": "I, Para cualquier tipo de vuelta o cambio de direccion,",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 61,
+      "fraccion": "II. La vuelta a la izquierda de una de las calles de doble circulacion a otra calle de doble circulacion.",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 62,
+      "fraccion": "III. De una calle de doble circulacion a una calle de una circulacion.",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 63,
+      "fraccion": "IV. No se permite vuelta a la izquierda en vias de doble circulacion, porque la raya divisora restringe este movimiento por lo que la entrada a cocheras, hospitales, estacionamientos y escuelas, debera realizarse en el sentido de circulacion donde se vaya  (...)",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 64,
+      "fraccion": "V. Las vueltas a la izquierda de una calle de una sola circulacion a una calle de doble circulacion .",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 65,
+      "fraccion": "VI. Las vueltas a la izquierda en cruceros donde ambas calles sean de una sola circulacion-",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 66,
+      "fraccion": "VII.Las vueltas continuas, solo podran realizarse cuando la senalizacion las permita, en caso de no existir senalamiento no estara permitido.",
+      "tipo": 49
+  },
+  {
+      "id_fraccion": 67,
+      "fraccion": "I.A media cuadra, se exceptuan cuando haya carril de retorno, ",
+      "tipo": 50
+  },
+  {
+      "id_fraccion": 68,
+      "fraccion": "II.En puentes, pasos a desnivel, curvas, zonas escolares y vias de ferrocarril, ",
+      "tipo": 50
+  },
+  {
+      "id_fraccion": 69,
+      "fraccion": "III.En cualquier lugar donde la visibilidad del conductor este limitada en tal forma que no se le permita ver la proximidad de vehiculos en sentido opuesto, ",
+      "tipo": 50
+  },
+  {
+      "id_fraccion": 70,
+      "fraccion": "IV.En cualquier lugar en donde la maniobra no permita ser realizada sin efectuar reversa, y, ",
+      "tipo": 50
+  },
+  {
+      "id_fraccion": 71,
+      "fraccion": "V. En sentido contrario al que tenga la calle transversal en avenidas y calles de alta circulacion.",
+      "tipo": 50
+  },
+  {
+      "id_fraccion": 72,
+      "tipo": 51
+  },
+  {
+      "id_fraccion": 73,
+      "tipo": 52
+  },
+  {
+      "id_fraccion": 74,
+      "tipo": 53
+  },
+  {
+      "id_fraccion": 75,
+      "tipo": 54
+  },
+  {
+      "id_fraccion": 76,
+      "tipo": 55
+  },
+  {
+      "id_fraccion": 78,
+      "tipo": 57
+  },
+  {
+      "id_fraccion": 79,
+      "fraccion": "I",
+      "tipo": 58
+  },
+  {
+      "id_fraccion": 80,
+      "fraccion": "II",
+      "tipo": 59
+  },
+  {
+      "id_fraccion": 81,
+      "fraccion": "VI",
+      "tipo": 60
+  },
+  {
+      "id_fraccion": 82,
+      "fraccion": "I.Sobre las banquetas, camellones, andadores, isletas, glorietas u otras vias reservadas a peatones,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 83,
+      "fraccion": "II. Frente a un acceso donde puedan entrar y salir vehiculos, excepto cuando se trate del domicilio del conductor,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 84,
+      "fraccion": "III.En un tramo menor a cinco metros de la entrada de una estacion de bomberos y vehiculos de emergencia,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 85,
+      "fraccion": "IV.En las areas definidas para ascenso y descenso de pasajeros del servicio publico de transporte colectivo de pasajeros,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 86,
+      "fraccion": "V.Sobre cualquier puente o estructura elevada de una via publica,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 87,
+      "fraccion": "VI.A menos de diez metros de cualquier cruce ferroviario,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 88,
+      "fraccion": "VII.En una via de menos de dos carriles en ambas aceras a excepcion del carril derecho,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 89,
+      "fraccion": "VIII.A menos de cien metros de una curva o cima sin visibilidad,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 90,
+      "fraccion": "IX.En las areas de cruce de peatones,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 91,
+      "fraccion": "X.En las zonas autorizadas para cargar y descargar, mientras no se realizan estas maniobras,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 92,
+      "fraccion": "XI.En sentido contrario al de la circulacion,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 93,
+      "fraccion": "XII.Frente a la entrada y salida de ambulancias en los hospitales,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 94,
+      "fraccion": "XIII.Frente a la entrada y salida de escuelas e instituciones educativas,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 95,
+      "fraccion": "XIV.Frente a los hidrantes para uso de los bomberos y en las zonas inmediatas y contiguas, que permitan cualquier maniobra vehicular de este H. Cuerpo de auxilio,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 96,
+      "fraccion": "XV.Frente a rampas especiales para personas con discapacidad,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 97,
+      "fraccion": "XVI.En cajones de estacionamiento exclusivo y especial para personas con discapacidades a menos que se trate de un vehiculo para esta finalidad y que porte placas especiales o que cuente con el holograma para discapacidad temporal otorgado por la Comision,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 98,
+      "fraccion": "XVII.En zonas o vias publicas prohibidas y definidas por la senalizacion",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 99,
+      "fraccion": "XVIII. En todas las esquinas de las calles, debiendose respetar una distancia en ellas de seis metros lineales en ambos sentidos de las calles convergentes,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 77,
+      "tipo": 55
+  },
+  {
+      "id_fraccion": 100,
+      "fraccion": "XIX.En calles con un arroyo de circulacion menor a cinco metros, a excepcion de motocicletas y bicicletas y,",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 101,
+      "fraccion": "XX.En linea con la banqueta en donde el estacionamiento se haga en forma diagonal o viceversa.",
+      "tipo": 61
+  },
+  {
+      "id_fraccion": 102,
+      "fraccion": "I.SIGA.- ",
+      "tipo": 62
+  },
+  {
+      "id_fraccion": 103,
+      "fraccion": "II.PREVENTIVA.- ",
+      "tipo": 62
+  },
+  {
+      "id_fraccion": 104,
+      "fraccion": "III.ALTO.- ",
+      "tipo": 62
+  },
+  {
+      "id_fraccion": 105,
+      "fraccion": "I.BARRERAS.- ",
+      "tipo": 63
+  },
+  {
+      "id_fraccion": 106,
+      "fraccion": "II.CONOS.- ",
+      "tipo": 63
+  },
+  {
+      "id_fraccion": 107,
+      "fraccion": "III.INDICADORES DE ALINEAMIENTOS.- ",
+      "tipo": 63
+  },
+  {
+      "id_fraccion": 108,
+      "fraccion": "I.LaMPARAS DE DESTELLOS.",
+      "tipo": 64
+  },
+  {
+      "id_fraccion": 109,
+      "fraccion": "II.LUCES ELeCTRICAS. ",
+      "tipo": 64
+  },
+  {
+      "id_fraccion": 110,
+      "fraccion": "I, VERTICALES",
+      "tipo": 65
+  },
+  {
+      "id_fraccion": 111,
+      "fraccion": "II.HORIZONTALES. ",
+      "tipo": 65
+  },
+  {
+      "id_fraccion": 112,
+      "fraccion": "III. MARCAS EN OBSTaCULOS: ",
+      "tipo": 65
+  },
+  {
+      "id_fraccion": 113,
+      "tipo": 65
+  },
+  {
+      "id_fraccion": 114,
+      "fraccion": "I.ALTO.",
+      "tipo": 66
+  },
+  {
+      "id_fraccion": 115,
+      "fraccion": "II.SIGA. ",
+      "tipo": 66
+  },
+  {
+      "id_fraccion": 116,
+      "fraccion": "III.PREVENTIVA. ",
+      "tipo": 66
+  },
+  {
+      "id_fraccion": 117,
+      "fraccion": "V",
+      "tipo": 67
+  },
+  {
+      "id_fraccion": 118,
+      "fraccion": "I.CHOQUE POR ALCANCE. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 119,
+      "fraccion": "IICHOQUE DE CRUCERO. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 120,
+      "fraccion": "III.CHOQUE LATERAL.  ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 121,
+      "fraccion": "IV.CHOQUE DE FRENTE. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 122,
+      "fraccion": "V.SALIDA DE ARROYO DE CIRCULACIoN. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 123,
+      "fraccion": "VI.CHOQUE CONTRA OBJETO FIJO. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 124,
+      "fraccion": "VII.VOLCADURA.  ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 125,
+      "fraccion": "VIII.PROYECCIoN. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 126,
+      "fraccion": "IX.ATROPELLO. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 127,
+      "fraccion": "X.CAiDA DE PERSONA. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 128,
+      "fraccion": "XI.CHOQUE CON MoVIL DE VEHiCULO. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 129,
+      "fraccion": "XII.CHOQUES DIVERSOS. ",
+      "tipo": 68
+  },
+  {
+      "id_fraccion": 130,
+      "tipo": 71
+  },
+  {
+      "id_fraccion": 131,
+      "fraccion": "I. TRANSPORTAR A PERSONAS EN LA ZONA QUE ES UTILIZADA PARA LA CARGA.",
+      "tipo": 72
+  },
+  {
+      "id_fraccion": 133,
+      "fraccion": "III. CIRCULAR EN CARRILES CENTRALES O TERCER CARRIL, CONTADOS DE DERECHA A IZQUIERDA",
+      "tipo": 72
+  },
+  {
+      "id_fraccion": 134,
+      "fraccion": "IV. LOS VEH\u00cdCULOS CON LONGITUD MAYOR A SEIS METROS Y ALTURA DE CUATRO METROS, NO DEBER\u00c1N TRANSITAR POR AVENIDAS O ZONAS RESTRINGIDAS.",
+      "tipo": 72
+  },
+  {
+      "id_fraccion": 132,
+      "fraccion": "  ",
+      "tipo": 72
+  },
+  {
+      "id_fraccion": 135,
+      "fraccion": "V",
+      "tipo": 74
+  },
+  {
+      "id_fraccion": 136,
+      "fraccion": "V",
+      "tipo": 75
+  },
+  {
+      "id_fraccion": 137,
+      "fraccion": "XV",
+      "tipo": 76
+  },
+  {
+      "id_fraccion": 138,
+      "fraccion": "V",
+      "tipo": 76
+  },
+  {
+      "id_fraccion": 139,
+      "fraccion": "XIV",
+      "tipo": 77
+  },
+  {
+      "id_fraccion": 140,
+      "fraccion": "XVI",
+      "tipo": 78
+  },
+  {
+      "id_fraccion": 141,
+      "fraccion": "VIII",
+      "tipo": 78
+  },
+  {
+      "id_fraccion": 142,
+      "fraccion": "XVIII",
+      "tipo": 79
+  },
+  {
+      "id_fraccion": 143,
+      "fraccion": "XX",
+      "tipo": 79
+  },
+  {
+      "id_fraccion": 144,
+      "fraccion": "IV",
+      "tipo": 80
+  },
+  {
+      "id_fraccion": 145,
+      "fraccion": "VIII",
+      "tipo": 81
+  },
+  {
+      "id_fraccion": 146,
+      "fraccion": "IX",
+      "tipo": 82
+  },
+  {
+      "id_fraccion": 147,
+      "tipo": 83
+  },
+  {
+      "id_fraccion": 148,
+      "fraccion": "I",
+      "tipo": 84
+  },
+  {
+      "id_fraccion": 149,
+      "fraccion": "XXIII",
+      "tipo": 85
+  },
+  {
+      "id_fraccion": 150,
+      "fraccion": "XXIV",
+      "tipo": 86
+  },
+  {
+      "id_fraccion": 151,
+      "fraccion": "XXV",
+      "tipo": 87
+  },
+  {
+      "id_fraccion": 152,
+      "fraccion": "I",
+      "tipo": 88
+  },
+  {
+      "id_fraccion": 153,
+      "fraccion": "II",
+      "tipo": 89
+  },
+  {
+      "id_fraccion": 154,
+      "fraccion": "III",
+      "tipo": 90
+  },
+  {
+      "id_fraccion": 155,
+      "fraccion": "V",
+      "tipo": 91
+  },
+  {
+      "id_fraccion": 156,
+      "fraccion": "VII",
+      "tipo": 92
+  },
+  {
+      "id_fraccion": 157,
+      "fraccion": "I,II,III Y IV",
+      "tipo": 93
+  },
+  {
+      "id_fraccion": 158,
+      "tipo": 94
+  },
+  {
+      "id_fraccion": 159,
+      "fraccion": "I,II Y III",
+      "tipo": 95
+  },
+  {
+      "id_fraccion": 160,
+      "tipo": 96
+  },
+  {
+      "id_fraccion": 161,
+      "tipo": 97
+  },
+  {
+      "id_fraccion": 162,
+      "tipo": 98
+  },
+  {
+      "id_fraccion": 163,
+      "fraccion": "II",
+      "tipo": 99
+  },
+  {
+      "id_fraccion": 164,
+      "fraccion": "II",
+      "tipo": 10
+  },
+  {
+      "id_fraccion": 165,
+      "fraccion": "II",
+      "tipo": 101
+  },
+  {
+      "id_fraccion": 166,
+      "fraccion": "V",
+      "tipo": 102
+  },
+  {
+      "id_fraccion": 167,
+      "fraccion": "IV",
+      "tipo": 103
+  },
+  {
+      "id_fraccion": 168,
+      "fraccion": "VI",
+      "tipo": 104
+  },
+  {
+      "id_fraccion": 169,
+      "fraccion": "XXI",
+      "tipo": 105
+  },
+  {
+      "id_fraccion": 170,
+      "fraccion": "XXVI",
+      "tipo": 106
+  },
+  {
+      "id_fraccion": 171,
+      "fraccion": "XXVII",
+      "tipo": 107
+  },
+  {
+      "id_fraccion": 172,
+      "fraccion": "VII",
+      "tipo": 108
+  },
+  {
+      "id_fraccion": 173,
+      "fraccion": "VIII",
+      "tipo": 109
+  },
+  {
+      "id_fraccion": 174,
+      "fraccion": "IX",
+      "tipo": 110
+  },
+  {
+      "id_fraccion": 175,
+      "fraccion": "XI",
+      "tipo": 111
+  },
+  {
+      "id_fraccion": 176,
+      "fraccion": "XII",
+      "tipo": 112
+  },
+  {
+      "id_fraccion": 177,
+      "fraccion": "XV",
+      "tipo": 113
+  },
+  {
+      "id_fraccion": 178,
+      "fraccion": "XVIII",
+      "tipo": 114
+  },
+  {
+      "id_fraccion": 179,
+      "fraccion": "XIX",
+      "tipo": 115
+  },
+  {
+      "id_fraccion": 180,
+      "fraccion": "XX",
+      "tipo": 116
+  },
+  {
+      "id_fraccion": 181,
+      "fraccion": "XXI",
+      "tipo": 117
+  },
+  {
+      "id_fraccion": 182,
+      "fraccion": "II",
+      "tipo": 118
+  },
+  {
+      "id_fraccion": 183,
+      "fraccion": "II",
+      "tipo": 118
+  },
+  {
+      "id_fraccion": 184,
+      "fraccion": "II",
+      "tipo": 119
+  },
+  {
+      "id_fraccion": 185,
+      "fraccion": "II",
+      "tipo": 120
+  },
+  {
+      "id_fraccion": 186,
+      "fraccion": "II",
+      "tipo": 120
+  },
+  {
+      "id_fraccion": 187,
+      "fraccion": "II",
+      "tipo": 121
+  },
+  {
+      "id_fraccion": 188,
+      "fraccion": "II",
+      "tipo": 122
+  },
+  {
+      "id_fraccion": 189,
+      "fraccion": "II",
+      "tipo": 122
+  },
+  {
+      "id_fraccion": 190,
+      "fraccion": "III",
+      "tipo": 123
+  },
+  {
+      "id_fraccion": 191,
+      "fraccion": "IV",
+      "tipo": 124
+  },
+  {
+      "id_fraccion": 192,
+      "fraccion": "IX",
+      "tipo": 125
+  },
+  {
+      "id_fraccion": 193,
+      "fraccion": "XI",
+      "tipo": 126
+  },
+  {
+      "id_fraccion": 194,
+      "tipo": 127
+  },
+  {
+      "id_fraccion": 195,
+      "fraccion": "II",
+      "tipo": 128
+  },
+  {
+      "id_fraccion": 196,
+      "fraccion": "II",
+      "tipo": 128
+  },
+  {
+      "id_fraccion": 197,
+      "fraccion": "II",
+      "tipo": 128
+  },
+  {
+      "id_fraccion": 198,
+      "fraccion": "I,II,III ,IV",
+      "tipo": 129
+  },
+  {
+      "id_fraccion": 199,
+      "fraccion": "I,II,III,IV,V",
+      "tipo": 130
+  },
+  {
+      "id_fraccion": 200,
+      "fraccion": "I,II,III",
+      "tipo": 131
+  },
+  {
+      "id_fraccion": 201,
+      "fraccion": "I",
+      "tipo": 132
+  },
+  {
+      "id_fraccion": 202,
+      "fraccion": "II",
+      "tipo": 132
+  },
+  {
+      "id_fraccion": 203,
+      "fraccion": "I,II,III,IV,V,VI,VII",
+      "tipo": 133
+  },
+  {
+      "id_fraccion": 204,
+      "fraccion": "I",
+      "tipo": 134
+  },
+  {
+      "id_fraccion": 205,
+      "fraccion": "II",
+      "tipo": 134
+  },
+  {
+      "id_fraccion": 206,
+      "fraccion": "III",
+      "tipo": 134
+  },
+  {
+      "id_fraccion": 207,
+      "fraccion": "IV",
+      "tipo": 134
+  },
+  {
+      "id_fraccion": 208,
+      "fraccion": "V",
+      "tipo": 134
+  },
+  {
+      "id_fraccion": 209,
+      "fraccion": "VI",
+      "tipo": 134
+  },
+  {
+      "id_fraccion": 210,
+      "fraccion": "I,II,III,IV,V",
+      "tipo": 135
+  },
+  {
+      "id_fraccion": 211,
+      "fraccion": "I,II",
+      "tipo": 136
+  },
+  {
+      "id_fraccion": 212,
+      "fraccion": "I,II",
+      "tipo": 136
+  },
+  {
+      "id_fraccion": 213,
+      "tipo": 137
+  },
+  {
+      "id_fraccion": 214,
+      "tipo": 138
+  },
+  {
+      "id_fraccion": 215,
+      "tipo": 139
+  },
+  {
+      "id_fraccion": 216,
+      "fraccion": "I",
+      "tipo": 140
+  },
+  {
+      "id_fraccion": 217,
+      "fraccion": "II",
+      "tipo": 141
+  },
+  {
+      "id_fraccion": 218,
+      "fraccion": "VI",
+      "tipo": 142
+  },
+  {
+      "id_fraccion": 219,
+      "tipo": 143
+  },
+  {
+      "id_fraccion": 220,
+      "tipo": 144
+  },
+  {
+      "id_fraccion": 221,
+      "fraccion": "I,II,III,IV AL XXVI",
+      "tipo": 145
+  },
+  {
+      "id_fraccion": 222,
+      "fraccion": "I,II,III",
+      "tipo": 146
+  },
+  {
+      "id_fraccion": 223,
+      "fraccion": "I,II,III",
+      "tipo": 147
+  },
+  {
+      "id_fraccion": 224,
+      "fraccion": "I,II,III",
+      "tipo": 148
+  },
+  {
+      "id_fraccion": 225,
+      "fraccion": "I",
+      "tipo": 149
+  },
+  {
+      "id_fraccion": 226,
+      "fraccion": "II",
+      "tipo": 149
+  },
+  {
+      "id_fraccion": 227,
+      "fraccion": "III",
+      "tipo": 149
+  },
+  {
+      "id_fraccion": 228,
+      "fraccion": "I Y II",
+      "tipo": 150
+  },
+  {
+      "id_fraccion": 229,
+      "fraccion": "I,II,III",
+      "tipo": 151
+  },
+  {
+      "id_fraccion": 230,
+      "fraccion": "I,II, III,VI,VII,VIII",
+      "tipo": 152
+  },
+  {
+      "id_fraccion": 231,
+      "fraccion": "VII",
+      "tipo": 153
+  },
+  {
+      "id_fraccion": 232,
+      "fraccion": "I, II, II AL XII",
+      "tipo": 154
+  },
+  {
+      "id_fraccion": 233,
+      "tipo": 155
+  }
+]

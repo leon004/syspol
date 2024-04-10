@@ -1,0 +1,297 @@
+[
+  {
+    "id_tipo": 1,
+    "Articulo": ["32", "33"],
+    "Concepto": "CONTROL VEHICULAR",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 2,
+    "Articulo": ["35"],
+    "Concepto": "EQUIPO PARA LA CIRCULACION DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 3,
+    "Articulo": ["36"],
+    "Concepto": "ASCENSO Y DESCENSO DE PASAJEROS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 4,
+    "Articulo": ["37", "38"],
+    "Concepto": "TRANSPORTE DE CARGA Y SUS MANIOBRAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 5,
+    "Articulo": ["40", "41", "44"],
+    "Concepto": "TRANSPORTE DE CARGA PELIGROSA",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 6,
+    "Articulo": ["46"],
+    "Concepto": "OBLIGACIONES DE LOS CONDUCTORES DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 7,
+    "Articulo": ["47"],
+    "Concepto": "PROHIBICIONES A LOS CONDUCTORES DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 8,
+    "Articulo": ["48", "49"],
+    "Concepto": "DE LAS OBLIGACIONES Y PROHIBICIONES (BICIMOTOS Y MOTOCICLETAS)",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 9,
+    "Articulo": ["50"],
+    "Concepto": "LICENCIAS PARA CONDUCIR",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 10,
+    "Articulo": ["55", "57", "58", "62"],
+    "Concepto": "CIRCULACION DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+
+  {
+    "id_tipo": 11,
+    "Articulo": ["65"],
+    "Concepto": "LOS REBASES",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 12,
+    "Articulo": ["69", "72", "75", "76", "79", "80"],
+    "Concepto": "LAS VUELTAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 13,
+    "Articulo": ["82"],
+    "Concepto": "VIAS PUBLICAS Y ZONAS PRIVADAS CON ACCESO AL PUBLICO Y SUS PROHIBICIONES",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 14,
+    "Articulo": ["86", "87", "88"],
+    "Concepto": "ESTACIONAMIENTO PROHIBIDO",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 15,
+    "Articulo": ["90"],
+    "Concepto": "DE LAS SEÑALES Y DISPOSITIVOS DE TRANSITO: SEÑALES HUMANAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 16,
+    "Articulo": ["92"],
+    "Concepto": "SEÑALES CANALIZADORAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 17,
+    "Articulo": ["93"],
+    "Concepto": "SEÑALES LUMINOSAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 18,
+    "Articulo": ["95"],
+    "Concepto": "SEÑALES GRAFICAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 19,
+    "Articulo": ["97"],
+    "Concepto": "SEÑALES SONORAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 20,
+    "Articulo": ["99"],
+    "Concepto": "SEÑALES DE OBRAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 21,
+    "Articulo": ["101"],
+    "Concepto": "DE LOS SEMAFOROS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 22,
+    "Articulo": ["120"],
+    "Concepto": "DE LOS ACCIDENTES DE TRANSITO",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 23,
+    "Articulo": ["132", "133", "136"],
+    "Concepto": "CONDUCCION DE VEHICULOS BAJO INFLUJO PSICOTROPICAS O TOXICAS DE BEBIDAS ALCOHOLICAS; ENERVANTES; ESTUPEFACIENTES; SUSTANCIAS",
+    "publicacion": "REGLAMENTO 2017"
+  },
+  {
+    "id_tipo": 24,
+    "Articulo": ["19"],
+    "Concepto": "DEL ASCENSO Y DESCENSO DE PASAJEROS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 25,
+    "Articulo": ["18", "20", "22", "59"],
+    "Concepto": "DE LA CIRCULACION DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 26,
+    "Articulo": ["18", "20", "22", "59"],
+    "Concepto": "DE LA CIRCULACION DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 27,
+    "Articulo": ["19"],
+    "Concepto": "DE LAS PROHIBICIONES A LOS CONDUCTORES DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 28,
+    "Articulo": ["18", "19"],
+    "Concepto": "DE LAS OBLIGACIONES Y PROHIBICIONES DE LOS CONDUCTORES DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 29,
+    "Articulo": ["20", "21", "22", "23"],
+    "Concepto": "DE LAS OBLIGACIONES Y PROHIBICIONES A LOS CONDUCTORES DE LOS VEHICULOS MOTORIZADOS SIN CARROCERIA",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 30,
+    "Articulo": ["33", "56"],
+    "Concepto": "DEL CONTROL VEHICULAR",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 31,
+    "Articulo": ["37", "38", "40"],
+    "Concepto": "DEL EQUIPO PARA LA CIRCULACION DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 32,
+    "Articulo": ["43", "44", "45"],
+    "Concepto": "TRANSPORTE DE CARGA Y SUS MANIOBRAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 33,
+    "Articulo": ["46", "47", "48", "50"],
+    "Concepto": "TRANSPORTE DE CARGA PELIGROSA",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 34,
+    "Articulo": ["52"],
+    "Concepto": "DE LAS LICENCIAS PARA CONDUCIR",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 35,
+    "Articulo": ["64", "65"],
+    "Concepto": "DE LOS REBASES",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 36,
+    "Articulo": ["68", "71", "74", "75"],
+    "Concepto": "DE LAS VUELTAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 37,
+    "Articulo": ["81"],
+    "Concepto": "VIAS PUBLICAS Y ZONAS PRIVADAS CON ACCESO AL PUBLICO Y SUS PROHIBICIONES",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 38,
+    "Articulo": ["85", "86", "87"],
+    "Concepto": "DEL ESTACIONAMIENTO PROHIBIDO",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 39,
+    "Articulo": ["91"],
+    "Concepto": "SEÑALES HUMANAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 40,
+    "Articulo": ["103"],
+    "Concepto": "SEÑALES CANALIZADORAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 41,
+    "Articulo": ["99"],
+    "Concepto": "SEÑALES LUMINOSAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 42,
+    "Articulo": ["96"],
+    "Concepto": "SEÑALES GRAFICAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 43,
+    "Articulo": ["98"],
+    "Concepto": "SEÑALES SONORAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 44,
+    "Articulo": ["102"],
+    "Concepto": "SEÑALES DE OBRAS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 45,
+    "Articulo": ["106"],
+    "Concepto": "DE LOS SEMAFOROS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 46,
+    "Articulo": ["128"],
+    "Concepto": "DEL GARAJE OFICIAL, LA DETENCION Y LIBERACION DE VEHICULOS",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 47,
+    "Articulo": ["118"],
+    "Concepto": "DE LOS ACCIDENTES DE TRANSITO",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 48,
+    "Articulo": ["130", "131", "134"],
+    "Concepto": "CONDUCCION DE VEHICULOS BAJO INFLUJO DE BEBIDAS ALCOHOLICAS, ENERVANTES, ESTUPEFACIENTES",
+    "publicacion": "REGLAMENTO 2021"
+  },
+  {
+    "id_tipo": 49,
+    "Articulo": ["76"],
+    "Concepto": "TRANSPORTE DE CARGA Y SUS MANIOBRAS",
+    "publicacion": "REGLAMENTO 2021"
+  }
+]

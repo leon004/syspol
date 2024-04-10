@@ -1,0 +1,21 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* O cualquier color que quieras para el fondo del encabezado */
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1); /* Sombra sutil para el encabezado */
+}
+
+.app-logo {
+  height: 50px; /* Ajusta el tamaño según tus necesidades */
+  margin-right: 15px; /* Espacio entre el logo y el título */
+}
+
+.app-title {
+  font-weight: bold;
+  font-size: 1.5em; /* Ajusta el tamaño del texto según tus necesidades */
+  color: #011D4D; /* Color del texto para el título */
+}
+h1{
+  padding: 15px;
+}

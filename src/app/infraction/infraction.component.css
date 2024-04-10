@@ -1,0 +1,97 @@
+/* infraction.component.css */
+.brand-logo {
+  height: 20px; /* Ajusta el tamaño según necesites */
+  width: auto;
+  margin-right: 8px; /* Espacio entre el logo y el texto */
+}
+/* infraction.component.css */
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+}
+
+.color-option {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.color-option mat-icon {
+  color: #fff;
+  visibility: hidden;
+}
+
+.color-option.selected mat-icon {
+  visibility: visible;
+}
+
+
+/* infraction.component.css */
+.image-upload-container {
+  margin-bottom: 20px;
+}
+
+.image-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #f0f0f0; /* Un poco más claro que #eee para el contraste */
+  border: 1px dashed #ccc; /* Estilo de borde punteado */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-upload-label:hover {
+  background-color: #e0e0e0; /* Un poco más oscuro al pasar el mouse */
+}
+
+.images-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio entre imágenes */
+}
+
+.image-container {
+  position: relative;
+  width: 100px; /* Tamaño fijo para mantener la consistencia */
+  height: 100px;
+  overflow: hidden; /* Ocultar cualquier parte de la imagen que desborde */
+}
+
+.preview-image {
+  width: 100%; /* Se asegura de que la imagen llene el contenedor */
+  height: 100%;
+  object-fit: cover; /* Asegurar que la imagen cubra todo el espacio sin distorsionarse */
+  border-radius: 4px; /* Bordes redondeados para la imagen */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+  transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+}
+
+.delete-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  color: #666; /* Color del icono */
+  border-radius: 50%; /* Círculo alrededor del icono */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el botón de eliminar */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+  color: #333; /* Color del icono más oscuro al pasar el mouse */
+}

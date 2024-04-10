@@ -1,0 +1,32 @@
+
+<div class="home-container">
+  <mat-card class="search-card">
+    <mat-card-header>
+      <mat-card-title>Ingresa las placas del vehículo</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Placas</mat-label>
+        <input matInput placeholder="Placas">
+      </mat-form-field>
+
+      <div class="radio-buttons">
+        <mat-radio-group aria-label="Selecciona una opción">
+          <mat-radio-button value="placas" checked>Placas</mat-radio-button>
+          <mat-radio-button value="vin">VIN</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="actions">
+        <!-- HTML -->
+        <button class="custom-button" (click)="search()">Buscar</button>
+        <button class="custom-button">Cancelar</button>
+
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<app-bottom-nav></app-bottom-nav>

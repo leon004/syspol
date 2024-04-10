@@ -1,0 +1,14 @@
+.version-number {
+  margin-left: auto;
+}
+
+mat-nav-list a {
+  padding: 12px 20px; /* Ajuste a tus necesidades */
+}
+
+mat-nav-list h3 {
+  padding: 8px 20px; /* Ajuste a tus necesidades */
+  color: rgba(0, 0, 0, 0.54); /* Color para los subtítulos */
+}
+
+/* Agrega estilos adicionales si es necesario */

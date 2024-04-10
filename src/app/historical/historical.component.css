@@ -1,0 +1,26 @@
+.historical-list {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.historical-entry {
+  border-bottom: 1px solid #eee;
+  padding: 80px;
+}
+
+.entry-content h3 {
+  margin: 0 0 5px 0;
+  color: #011D4D;
+}
+
+.entry-content p {
+  margin: 0;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+mat-icon {
+  margin-right: 5px;
+}

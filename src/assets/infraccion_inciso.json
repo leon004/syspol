@@ -1,0 +1,257 @@
+[
+  {
+      "id_inciso": "1",
+      "inciso": "a) Luces indicadoras de reversa del vehiculo automotor, remolque o semirremolque.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "2",
+      "inciso": "b) Luces direccionales de destello",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "3",
+      "inciso": "c) Faros, cuartos y reflejantes que emitan y/o reflejen luz ambar en la parte delantera y luz roja en la parte trasera.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "4",
+      "inciso": "d) Luces de destello intermitente para estacionamiento de emergencia.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "5",
+      "inciso": "e) Luz blanca que ilumine la placa posterior.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "6",
+      "inciso": "f) Los vehiculos de servicio publico, deben traer luz interior en el compartimento de pasajeros.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "7",
+      "inciso": "g) faros y torretas en vehiculos de mantenimiento gruas y de auxilio vial.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "8",
+      "inciso": "h) Luces indicadoras de reversa, direccionales de destello, de destello intermitente y blanca que ilumine la placa de remolques y semirremolques. ",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "9",
+      "inciso": "i) Lamparas, luces delanteras y traseras, direccionales y reflejante en motocicletas y bicimotos.",
+      "fraccion": "4.0"
+  },
+  {
+      "id_inciso": "10",
+      "inciso": "a) Ventanillas protegidas y circular en todo momento con las puertas debidamente cerradas.",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "11",
+      "inciso": "b) Pintados en amarillo, con una franja en color negro, al centro de todo el autobus y leyendas con el mismo color.",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "12",
+      "inciso": "c) Salida de emergencia.",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "13",
+      "inciso": "d) Numero economico.",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "14",
+      "inciso": "e) Bitacora de mantenimiento.",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "15",
+      "inciso": "f) Conductor debera acreditar con un documento expedido por autoridad. competente que esta clinicamente sano",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "16",
+      "inciso": "g) Conductor de la unidad debera poseer licencia de chofer vigente.",
+      "fraccion": "7.0"
+  },
+  {
+      "id_inciso": "17",
+      "inciso": "b) Antes de efectuar la maniobra se debera reducir gradualmente la velocidad, ",
+      "fraccion": "47.0"
+  },
+  {
+      "id_inciso": "18",
+      "inciso": "c) Durante la maniobra la velocidad sera moderada, ",
+      "fraccion": "60.0"
+  },
+  {
+      "id_inciso": "19",
+      "inciso": "d) Durante la maniobra se debera ceder el paso a los peatones que crucen la calle o avenida hacia donde se esta efectuando la vuelta, y, ",
+      "fraccion": "60.0"
+  },
+  {
+      "id_inciso": "20",
+      "inciso": "e) Utilizar los carriles exclusivos canalizados o marcados para la realizacion de vueltas o cambios de direcciones, ",
+      "fraccion": "60.0"
+  },
+  {
+      "id_inciso": "21",
+      "inciso": "a) La aproximacion a un crucero o interseccion, debera hacerse sobre el carril izquierdo de su sentido de circulacion, junto al camellon o linea central marcada o imaginaria divisoria de carriles,",
+      "fraccion": "61.0"
+  },
+  {
+      "id_inciso": "22",
+      "inciso": "b) Antes de utilizar el carril de circulacion opuesto se debera ceder el paso a los vehiculos que circulan en sentido contrario, ",
+      "fraccion": "61.0"
+  },
+  {
+      "id_inciso": "23",
+      "inciso": "c) Al entrar a la calle transversal, deberan hacerlo a la derecha del centro de la misma,",
+      "fraccion": "61.0"
+  },
+  {
+      "id_inciso": "24",
+      "inciso": "a) Antes de realizar la maniobra de vuelta se debera ceder el paso a los vehiculos que circulan en sentido opuesto, y, ",
+      "fraccion": "62.0"
+  },
+  {
+      "id_inciso": "25",
+      "inciso": "b) Al entrar a la calle transversal podra hacerlo cuando observe que no circule otro vehiculo en la misma Comision de manera simultanea,",
+      "fraccion": "62.0"
+  },
+  {
+      "id_inciso": "26",
+      "inciso": "a) La aproximacion al crucero o interseccion se debera hacer por el carril de la izquierda, lo mas proximo posible a la banqueta, acotamiento o limite de arroyo de circulacion, ",
+      "fraccion": "64.0"
+  },
+  {
+      "id_inciso": "27",
+      "inciso": "b) Al entrar a la calle transversal, deberan hacerlo utilizando el carril izquierdo del sentido de circulacion, y,",
+      "fraccion": "64.0"
+  },
+  {
+      "id_inciso": "28",
+      "inciso": "a) La aproximacion se hara sobre el carril de la izquierda, lo mas cerca posible a la banqueta, acotamiento o limite de arroyo de circulacion, a menos que en el lugar existan senales para dar vuelta en mas de una fila y debera hacerlo tomando el carril izq (...)",
+      "fraccion": "65.0"
+  },
+  {
+      "id_inciso": "29",
+      "inciso": "a) RAYAS LONGITUDINALES DISCONTINUAS. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "30",
+      "inciso": "b) COMBINACION DE RAYAS CENTRALES LONGITUDINALES CONTINUAS Y DISCONTINUAS.",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "31",
+      "inciso": "c) RAYAS PEATONALES d) RAYAS TRANSVERSALES ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "32",
+      "inciso": "e) RAYAS OBLICUAS.",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "33",
+      "inciso": "f) RAYAS DE ESTACIONAMIENTO. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "34",
+      "inciso": "g) MARCAS EN GUARNICION Y/O BANQUETA. ATONALES.",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "35",
+      "inciso": "h) RAYA SEPARADORA DE SENTIDOS DE CIRCULACION. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "36",
+      "inciso": "i) RAYA EN LA ORILLA DEL ARROYO VIAL. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "37",
+      "inciso": "j) RAYA DE ALTO. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "38",
+      "inciso": "k) RAYA SEPARADORA DE CARRILES EXCLUSIVOS., ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "39",
+      "inciso": "l) RAYAS CANALIZADORAS. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "40",
+      "inciso": "m) RAYAS PARA CRUCE DE CICLISTAS. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "41",
+      "inciso": "n) RAYAS PARA CRUCE DE PEATONES EN INFRAESTRUCTURA CICLISTA. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "42",
+      "inciso": "o) MARCA PARA IDENTIFICAR INFRAESTRUCTURA CICLISTA COMPARTIDA. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "43",
+      "inciso": "p) MARCA PARA IDENTIFICAR INFRAESTRUCTURA CICLISTA EXCLUSIVA. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "44",
+      "inciso": "q) MARCA PARA IDENTIFICAR AREA DE CIRCULACION PEATONAL. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "45",
+      "inciso": "r) AREA DE ESPERA CICLISTA.",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "46",
+      "inciso": "a)RAYAS DIAGONALES. ",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "47",
+      "inciso": "b) FANTASMAS.",
+      "fraccion": "111.0"
+  },
+  {
+      "id_inciso": "48",
+      "inciso": "a) Las sirenas que utilizan los vehiculos de emergencia autorizados, ",
+      "fraccion": "113.0"
+  },
+  {
+      "id_inciso": "49",
+      "inciso": "b) Los timbres o campanas utilizados en conjunto con luces rojas para anunciar la proximidad o paso de vehiculos sobre rieles.",
+      "fraccion": "113.0"
+  },
+  {
+      "id_inciso": "50",
+      "inciso": null,
+      "fraccion": "130.0"
+  },
+  {
+      "id_inciso": "51",
+      "inciso": null,
+      "fraccion": null
+  }
+]

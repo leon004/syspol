@@ -1,0 +1,161 @@
+
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Vehículo</ng-template>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Placas</mat-label>
+        <input matInput placeholder="Placas" formControlName="plates" required>
+      </mat-form-field>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Seleccione un estado</mat-label>
+          <mat-select formControlName="state">
+            <mat-option *ngFor="let estado of estados" [value]="estado.value">
+              {{ estado.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Seleccione una marca</mat-label>
+          <mat-select formControlName="brand" (selectionChange)="onMarcaSelected($event.value)">
+            <!-- Opciones de marcas aquí -->
+            <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+              {{ marca.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill"  *ngIf="modelos.length > 0">
+          <mat-label>Seleccione un modelo</mat-label>
+          <mat-select formControlName="model">
+            <!-- Opciones de modelos aquí -->
+            <mat-option *ngFor="let modelo of modelos" [value]="modelo">
+              {{ modelo }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Seleccione un año (opcional)</mat-label>
+          <mat-select formControlName="year">
+            <!-- Opciones de años aquí -->
+            <mat-option *ngFor="let year of years" [value]="year.value">
+      {{ year.viewValue }}
+    </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Seleccione un color</mat-label>
+          <!-- Puedes cambiar esto por un color picker si es necesario -->
+          <input matInput formControlName="color" placeholder="Color">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step [stepControl]="secondFormGroup" label="Infraccion">
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Motivo de la multa (Opcional)</mat-label>
+        <textarea matInput formControlName="reason" placeholder="Describe el motivo"></textarea>
+      </mat-form-field>
+
+      <div class="infracciones-container">
+        <div class="title-with-button">
+          <div>Agregar infracciones</div>
+          <button mat-mini-fab color="primary" (click)="addInfraccion()">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+
+        <div formArrayName="infracciones" *ngFor="let infraccion of infracciones().controls; let i = index">
+          <div [formGroupName]="i" class="infraccion-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Seleccione una multa</mat-label>
+              <mat-select formControlName="multa">
+                <!-- Aquí irían las opciones de multas -->
+              </mat-select>
+            </mat-form-field>
+            <button mat-icon-button (click)="removeInfraccion(i)">
+              <mat-icon>close</mat-icon>
+            </button>
+            <button mat-icon-button [matTooltip]="getInfraccionInfo(i)">
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- infraction.component.html -->
+<mat-step [stepControl]="thirdFormGroup">
+  <ng-template matStepLabel>General</ng-template>
+
+  <!-- Ubicación -->
+  <mat-form-field appearance="fill">
+    <mat-label>Ubicación</mat-label>
+    <input matInput placeholder="Ubicación" formControlName="ubicacion" required>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="fijarUbicacion">Fijar ubicación manualmente</mat-checkbox>
+
+  <!-- Nombre del infractor -->
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre del infractor (Opcional)</mat-label>
+    <input matInput placeholder="Nombre/AUSENTE" formControlName="nombreInfractor">
+  </mat-form-field>
+
+  <!-- Cargar fotos -->
+  <div class="image-upload-container">
+    <label for="imageUpload" class="image-upload-label">
+      <mat-icon>add_photo_alternate</mat-icon>
+      Agregar más fotos
+    </label>
+    <input type="file" id="imageUpload" multiple (change)="onImageUpload($event)" [attr.accept]="acceptFileTypes" hidden>
+  </div>
+
+  <!-- Previsualización de imágenes cargadas -->
+  <div class="images-preview-container">
+    <div *ngFor="let image of images; let i = index" class="image-container">
+      <img [src]="image" class="preview-image">
+      <mat-icon class="delete-icon" (click)="deleteImage(i)">cancel</mat-icon>
+    </div>
+  </div>
+
+  <button mat-raised-button matStepperPrevious>Atrás</button>
+  <button mat-raised-button matStepperNext>Continuar</button>
+</mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
