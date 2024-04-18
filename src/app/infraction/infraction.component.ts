@@ -31,6 +31,14 @@ export class InfractionComponent implements OnInit {
   fracciones: any[] = [];
   incisos: any[] = [];
   informacionSeleccionada: any = {};
+  colores = [
+    { value: '#ff0000', name: 'Rojo' },
+    { value: '#00ff00', name: 'Verde' },
+    { value: '#0000ff', name: 'Azul' },
+    { value: '#ffff00', name: 'Amarillo' },
+    // Agrega más colores según necesites
+  ];
+  infraccionesMotivos: any[] = [];
 
 
   constructor(private _formBuilder: FormBuilder, private dataService: DataService) {}
@@ -49,6 +57,7 @@ export class InfractionComponent implements OnInit {
       reason: [''],
       infracciones: this._formBuilder.array([])
     });
+    this.addInfraccion();
 
     this.thirdFormGroup = this._formBuilder.group({
       ubicacion: ['', Validators.required],
@@ -68,12 +77,21 @@ export class InfractionComponent implements OnInit {
       this.years = years;
     });
 
+    this.dataService.getInfracciones().subscribe(data => {
+      this.infraccionesMotivos = data;
+    });
+
     this.firstFormGroup.get('brand')!.valueChanges.pipe(
       map(brand => this.dataService.getModelosPorMarca(brand))
     ).subscribe(modelos$ => modelos$.subscribe(modelos => {
       this.modelos = modelos;
     }));
+    this.dataService.getMotivos().subscribe(data => {
+      this.motivos = data;
+    });
   }
+
+
 
   onImageUpload(event: Event) {
     const element = event.currentTarget as HTMLInputElement;
@@ -113,14 +131,18 @@ deleteImage(index: number) {
     this.infracciones().removeAt(index);
   }
 
+
+
+  getInfraccionInfo(index: number): any {
+    const selectedInfraccion = this.infracciones().at(index) as FormGroup;
+    return selectedInfraccion.get('detalleMulta')!.value;
+  }
   createInfraccionFormGroup(): FormGroup {
     return this._formBuilder.group({
       multa: ['', Validators.required],
+      detalleMulta: [null]  // Puedes inicializar como null si el valor inicial realmente no existe
     });
   }
 
-  getInfraccionInfo(index: number): string {
-    // Implementa la lógica según sea necesario
-    return 'Información de la multa';
-  }
+
 }

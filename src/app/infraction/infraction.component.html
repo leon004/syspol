@@ -3,114 +3,149 @@
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Vehículo</ng-template>
+      <div class="flex items-center w-full">
 
-
-      <mat-form-field appearance="fill">
-        <mat-label>Placas</mat-label>
-        <input matInput placeholder="Placas" formControlName="plates" required>
-      </mat-form-field>
-
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Seleccione un estado</mat-label>
-          <mat-select formControlName="state">
-            <mat-option *ngFor="let estado of estados" [value]="estado.value">
-              {{ estado.viewValue }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+        <div class="flex-grow pl-4">
+          <div class="mb-1 text-sm font-semibold text-gray-700">Placas</div>
+          <input matInput formControlName="plates" required class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-500" placeholder="Placas del vehículo">
+        </div>
       </div>
 
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Seleccione una marca</mat-label>
-          <mat-select formControlName="brand" (selectionChange)="onMarcaSelected($event.value)">
-            <!-- Opciones de marcas aquí -->
-            <mat-option *ngFor="let marca of marcas" [value]="marca.value">
-              {{ marca.viewValue }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+      <div class="flex items-center w-full pt-8">
+        <div class="flex-grow pl-4">
+          <mat-form-field appearance="fill" class="w-full">
+            <mat-label>Seleccione un estado</mat-label>
+            <mat-select formControlName="state" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
+              <mat-option *ngFor="let estado of estados" [value]="estado.value">
+                {{ estado.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
 
-      <div>
-        <mat-form-field appearance="fill"  *ngIf="modelos.length > 0">
-          <mat-label>Seleccione un modelo</mat-label>
-          <mat-select formControlName="model">
-            <!-- Opciones de modelos aquí -->
-            <mat-option *ngFor="let modelo of modelos" [value]="modelo">
-              {{ modelo }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
+
+      <!-- Seleccionar Marca -->
+<div class="flex items-center w-full pt-8">
+  <div class="flex-grow pl-4">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Seleccione una marca</mat-label>
+      <mat-select formControlName="brand" (selectionChange)="onMarcaSelected($event.value)" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
+        <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+          {{ marca.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<!-- Seleccionar Modelo -->
+<div class="flex items-center w-full pt-8" *ngIf="modelos.length > 0">
+  <div class="flex-grow pl-4">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Seleccione un modelo</mat-label>
+      <mat-select formControlName="model" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
+        <mat-option *ngFor="let modelo of modelos" [value]="modelo">
+          {{ modelo }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<!-- Seleccionar Año -->
+<div class="flex items-center w-full pt-8">
+  <div class="flex-grow pl-4">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Seleccione un año (opcional)</mat-label>
+      <mat-select formControlName="year" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
+        <mat-option *ngFor="let year of years" [value]="year.value">
+          {{ year.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<div>
+  <mat-form-field appearance="fill" class="w-full">
+    <mat-label>Seleccione un color</mat-label>
+    <mat-select formControlName="color" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
+      <mat-option *ngFor="let color of colores" [value]="color.value">
+        <span class="color-indicator" [style.background-color]="color.value"></span>
+        {{ color.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
 
       <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Seleccione un año (opcional)</mat-label>
-          <mat-select formControlName="year">
-            <!-- Opciones de años aquí -->
-            <mat-option *ngFor="let year of years" [value]="year.value">
-      {{ year.viewValue }}
-    </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <mat-form-field appearance="fill">
-          <mat-label>Seleccione un color</mat-label>
-          <!-- Puedes cambiar esto por un color picker si es necesario -->
-          <input matInput formControlName="color" placeholder="Color">
-        </mat-form-field>
-      </div>
-
-      <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext>Continuar</button>
       </div>
     </form>
   </mat-step>
 
 
   <mat-step [stepControl]="secondFormGroup" label="Infraccion">
-    <form [formGroup]="secondFormGroup">
-      <mat-form-field appearance="fill">
+    <form [formGroup]="secondFormGroup" class="space-y-4">
+      <!-- Campo de Motivo de la Multa -->
+      <mat-form-field appearance="fill" class="w-full">
         <mat-label>Motivo de la multa (Opcional)</mat-label>
-        <textarea matInput formControlName="reason" placeholder="Describe el motivo"></textarea>
+        <textarea matInput formControlName="reason" placeholder="Describe el motivo" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
       </mat-form-field>
 
-      <div class="infracciones-container">
-        <div class="title-with-button">
-          <div>Agregar infracciones</div>
-          <button mat-mini-fab color="primary" (click)="addInfraccion()">
+      <!-- Contenedor de Infracciones -->
+      <!-- <div class="infracciones-container space-y-2">
+        <div class="flex justify-between items-center mb-2">
+          <div class="font-semibold">Agregar infracciones</div>
+          <button mat-mini-fab color="primary" (click)="addInfraccion()" class="bg-blue-500 hover:bg-blue-700 text-white rounded-full p-2">
             <mat-icon>add</mat-icon>
           </button>
         </div>
 
-        <div formArrayName="infracciones" *ngFor="let infraccion of infracciones().controls; let i = index">
-          <div [formGroupName]="i" class="infraccion-group">
-            <mat-form-field appearance="fill">
+        <div formArrayName="infracciones" *ngFor="let infraccion of infracciones().controls; let i = index" class="flex items-center space-x-2">
+          <div [formGroupName]="i" class="flex items-center w-full">
+            <mat-form-field appearance="fill" class="flex-grow">
               <mat-label>Seleccione una multa</mat-label>
-              <mat-select formControlName="multa">
-                <!-- Aquí irían las opciones de multas -->
+              <mat-select formControlName="multa" (selectionChange)="infracciones().at(i).get('detalleMulta').setValue($event.value)">
+                <mat-option *ngFor="let motivo of infraccionesMotivos" [value]="motivo">
+                  {{ motivo.motivo }}
+                </mat-option>
               </mat-select>
             </mat-form-field>
-            <button mat-icon-button (click)="removeInfraccion(i)">
-              <mat-icon>close</mat-icon>
-            </button>
-            <button mat-icon-button [matTooltip]="getInfraccionInfo(i)">
+            <button mat-icon-button (click)="getInfraccionInfo(i)" class="text-red-500 hover:text-red-700">
               <mat-icon>info</mat-icon>
             </button>
+            <div *ngIf="getInfraccionInfo(i)">
+              <div class="info-panel">
+                <p>Artículo: {{ getInfraccionInfo(i)?.articulo }}</p>
+                <p>Tipo: {{ getInfraccionInfo(i)?.tipo }}</p>
+                <p>Publicación: {{ getInfraccionInfo(i)?.publicacion }}</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Seleccione un motivo</mat-label>
+        <mat-select formControlName="motivo">
+          <mat-option *ngFor="let motivo of motivos" [value]="motivo.id_motivo">
+            {{ motivo.motivo }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <!-- Botones de Navegación del Stepper -->
+      <div class="flex justify-between pt-4">
+        <button mat-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Back</button>
+        <button mat-button matStepperNext class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next</button>
       </div>
     </form>
   </mat-step>
+
   <!-- infraction.component.html -->
 <mat-step [stepControl]="thirdFormGroup">
   <ng-template matStepLabel>General</ng-template>

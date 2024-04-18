@@ -95,3 +95,11 @@
 .delete-icon:hover {
   color: #333; /* Color del icono más oscuro al pasar el mouse */
 }
+.color-indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}

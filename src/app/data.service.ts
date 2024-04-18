@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -45,4 +45,15 @@ export class DataService {
       map(incisos => incisos.filter(i => i.fraccion === fraccionId))
     );
   }
+
+  getInfracciones(): Observable<any[]> {
+    return this.http.get<any[]>('assets/infraccion_motivo.json').pipe(
+      tap(data => console.log('Infracciones cargadas:', data))  // Añade esto para ver los datos cargados
+    );
+  }
+
+  getMotivos(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/infraccion_motivo.json');
+  }
+
 }
