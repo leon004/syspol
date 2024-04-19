@@ -100,3 +100,6 @@
   background-color: #0041a8; /* Color de fondo aún más oscuro al hacer clic */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra menos pronunciada al hacer clic */
 }
+input[type="text"] {
+  text-transform: uppercase;
+}

@@ -67,16 +67,18 @@
   </div>
 </div>
 
-<div>
-  <mat-form-field appearance="fill" class="w-full">
-    <mat-label>Seleccione un color</mat-label>
-    <mat-select formControlName="color" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
-      <mat-option *ngFor="let color of colores" [value]="color.value">
-        <span class="color-indicator" [style.background-color]="color.value"></span>
-        {{ color.name }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+<div  class="flex items-center w-full pt-8">
+  <div class="flex-grow pl-4">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Seleccione un color</mat-label>
+      <mat-select formControlName="color" class="bg-white border border-gray-300 rounded-lg focus:ring focus:border-blue-500">
+        <mat-option *ngFor="let color of colores" [value]="color.value">
+          <span class="color-indicator" [style.background-color]="color.value"></span>
+          {{ color.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 </div>
 
 
@@ -96,7 +98,7 @@
       </mat-form-field>
 
       <!-- Contenedor de Infracciones -->
-      <!-- <div class="infracciones-container space-y-2">
+      <div class="infracciones-container space-y-2">
         <div class="flex justify-between items-center mb-2">
           <div class="font-semibold">Agregar infracciones</div>
           <button mat-mini-fab color="primary" (click)="addInfraccion()" class="bg-blue-500 hover:bg-blue-700 text-white rounded-full p-2">
@@ -104,31 +106,9 @@
           </button>
         </div>
 
-        <div formArrayName="infracciones" *ngFor="let infraccion of infracciones().controls; let i = index" class="flex items-center space-x-2">
-          <div [formGroupName]="i" class="flex items-center w-full">
-            <mat-form-field appearance="fill" class="flex-grow">
-              <mat-label>Seleccione una multa</mat-label>
-              <mat-select formControlName="multa" (selectionChange)="infracciones().at(i).get('detalleMulta').setValue($event.value)">
-                <mat-option *ngFor="let motivo of infraccionesMotivos" [value]="motivo">
-                  {{ motivo.motivo }}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <button mat-icon-button (click)="getInfraccionInfo(i)" class="text-red-500 hover:text-red-700">
-              <mat-icon>info</mat-icon>
-            </button>
-            <div *ngIf="getInfraccionInfo(i)">
-              <div class="info-panel">
-                <p>Artículo: {{ getInfraccionInfo(i)?.articulo }}</p>
-                <p>Tipo: {{ getInfraccionInfo(i)?.tipo }}</p>
-                <p>Publicación: {{ getInfraccionInfo(i)?.publicacion }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <mat-form-field appearance="fill" class="w-full">
+        <div formArrayName="infracciones" class="flex items-center space-x-2">
+        <div class="w-full">
+          <mat-form-field appearance="fill" class="w-full">
         <mat-label>Seleccione un motivo</mat-label>
         <mat-select formControlName="motivo">
           <mat-option *ngFor="let motivo of motivos" [value]="motivo.id_motivo">
@@ -136,6 +116,21 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
+            <button mat-icon-button  class="text-red-500 hover:text-red-700">
+              <mat-icon>info</mat-icon>
+            </button>
+            <!-- <div>
+              <div class="info-panel">
+                <p>Artículo: </p>
+                <p>Tipo: </p>
+                <p>Publicación: </p>
+              </div> -->
+            <!-- q -->
+          </div>
+        </div>
+      </div>
+
+
 
 
       <!-- Botones de Navegación del Stepper -->
