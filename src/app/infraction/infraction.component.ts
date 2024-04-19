@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DataService } from '../data.service';
 import { map } from 'rxjs';
 import { SharedService } from '../shared.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -46,7 +47,7 @@ export class InfractionComponent implements OnInit {
   infraccionesMotivos: any[] = [];
 
 
-  constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService) {}
+  constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService, private snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -197,6 +198,15 @@ deleteImage(index: number) {
     }
   }
 
+  registrarInfraccion(){
+    this.openSnackBar("Datos enviados correctamente");
+  }
+
+  openSnackBar(message: string){
+    this.snackBar.open(message, 'Cerrar', {
+      duration: 3000,
+    });
+  }
 
 
 }

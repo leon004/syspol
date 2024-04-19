@@ -26,6 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatList, MatListModule, MatListItem, MatNavList } from '@angular/material/list';
 import { JuezComponent } from './juez/juez.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +43,23 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, CommonModule, MatButtonModule, MatIconModule, MatTooltipModule, MatIcon,
-     MatCardModule, MatFormFieldModule, MatInputModule, MatRadioModule,MatStepperModule, MatSelectModule, ReactiveFormsModule, MatListModule, MatListItem, MatNavList
+    HttpClientModule,
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatIcon,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatStepperModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatListModule,
+    MatListItem,
+    MatNavList,
+    MatSnackBarModule
   ],
   providers: [
     provideAnimationsAsync()
