@@ -3,7 +3,6 @@
     <mat-card-header>
       <mat-card-title>Ingresa las placas del vehículo</mat-card-title>
     </mat-card-header>
-
     <mat-card-content>
       <form [formGroup]="vehicleForm">
         <mat-form-field appearance="fill">
@@ -17,7 +16,6 @@
             <mat-radio-button value="vin">VIN</mat-radio-button>
           </mat-radio-group>
         </div>
-
         <div class="actions">
           <button class="custom-button" (click)="search()" type="button" [disabled]="!vehicleForm.valid">Buscar</button>
           <button class="custom-button" type="button">Cancelar</button>
@@ -26,5 +24,4 @@
     </mat-card-content>
   </mat-card>
 </div>
-
 <app-bottom-nav></app-bottom-nav>

@@ -1,29 +1,22 @@
-<nav class="bg-blue-500 dark:bg-gray-800">
+<nav>
   <div class="container mx-auto px-4 flex items-center justify-between">
     <!-- Logo a la izquierda -->
-    <a href="/" class="flex items-center">
-      <img src="../assets/images/logo.png" alt="Syspol Logo" class="mr-3 h-8"> <!-- Tailwind no tiene una clase directa para el logo, ajusta la altura con h-8 según sea necesario -->
+    <a href="/" class="container mx-auto px-4 flex items-center justify-center">
+      <img src="../assets/images/logo.png" alt="Syspol Logo" class="h-16"> <!-- Tailwind no tiene una clase directa para el logo, ajusta la altura con h-8 según sea necesario -->
     </a>
-
     <!-- Texto centrado, ajusta el flex-grow para que ocupe el espacio disponible -->
     <div class="flex-grow text-center">
-      <a href="/" class="text-white text-lg">Syspol</a>
+      <a href="/" class="text-white text-lg"></a>
     </div>
-
     <!-- Navegador Toggler a la derecha -->
     <button class="text-white" type="button" aria-label="Toggle navigation">
-
     </button>
-
     <!-- Collapsible content, keeps empty if no links are needed or fill as required -->
     <div class="hidden">
       <!-- Optionally you can add menu items here if needed -->
     </div>
   </div>
 </nav>
-
-
-
 <router-outlet></router-outlet>
 
 

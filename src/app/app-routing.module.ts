@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HistoricalComponent } from './historical/historical.component';
 import { InfractionComponent } from './infraction/infraction.component';
+import { JuezComponent } from './juez/juez.component';
+import { CarDetailComponent } from './car-detail/car-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'historical', component: HistoricalComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'infraction', component: InfractionComponent },
+  { path: 'juez', component: JuezComponent },
+  { path: 'car-detail', component: CarDetailComponent }
 ];
 
 @NgModule({

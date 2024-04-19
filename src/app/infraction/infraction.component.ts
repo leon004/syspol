@@ -40,6 +40,7 @@ export class InfractionComponent implements OnInit {
     { value: '#00ff00', name: 'Verde' },
     { value: '#0000ff', name: 'Azul' },
     { value: '#ffff00', name: 'Amarillo' },
+    { value: '#ffffff', name: 'Blanco'}
     // Agrega más colores según necesites
   ];
   infraccionesMotivos: any[] = [];

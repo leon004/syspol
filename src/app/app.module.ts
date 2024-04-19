@@ -25,6 +25,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { MatList, MatListModule, MatListItem, MatNavList } from '@angular/material/list';
 import { JuezComponent } from './juez/juez.component';
+import { CarDetailComponent } from './car-detail/car-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { JuezComponent } from './juez/juez.component';
     InfractionComponent,
     ProfileComponent,
     BottomNavComponent,
-    JuezComponent
+    JuezComponent,
+    CarDetailComponent
   ],
   imports: [
     BrowserModule,

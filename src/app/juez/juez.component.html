@@ -1,1 +1,131 @@
-<p>juez works!</p>
+<!-- search-bar.component.html -->
+<div class="bg-white shadow p-4 flex max-w-lg mx-auto">
+  <span class="w-auto flex justify-end items-center text-gray-500 p-2">
+    <i class="material-icons text-3xl">search</i>
+  </span>
+  <input class="flex-grow rounded p-2" type="text" placeholder="Buscar...">
+  <button class="ml-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+    Buscar
+  </button>
+</div>
+
+<!-- filter-tags.component.html -->
+<div class="bg-white shadow-md rounded flex justify-center items-center p-4">
+  <div class="flex flex-wrap gap-2 justify-center">
+    <button class="px-3 py-1 text-sm text-gray-800 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500">
+      Más Reciente
+    </button>
+    <button class="px-3 py-1 text-sm text-gray-800 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500">
+      Más antigua
+    </button>
+    <button class="px-3 py-1 text-sm text-gray-800 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500">
+      Por Marca
+    </button>
+    <button class="px-3 py-1 text-sm text-gray-800 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500">
+      Por Área
+    </button>
+  </div>
+</div>
+
+
+
+<!-- Envoltorio para todas las cards -->
+<div class="flex flex-row flex-wrap justify-center items-stretch">
+  <!-- Card del Nissan Sentra -->
+  <div class="flex max-w-lg rounded overflow-hidden shadow-lg mt-8 mx-4" [routerLink]="['/car-detail']" routerLinkActive="router-link-active" >
+    <img class="w-1/3 object-cover" src="../../assets/images/Sentra/sentra1.jpeg" alt="Imagen del Nissan Sentra">
+    <div class="w-2/3 px-4 py-2">
+      <div class="font-bold text-lg mb-2">PFC-449-S</div>
+      <p class="text-gray-700 text-sm">
+        2024-03-05 09:43:33
+      </p>
+      <p class="text-gray-700 text-sm">
+       <strong>Modelo:</strong> Nissan Sentra
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Folio: </strong> 0428360
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Motivo: </strong> No presentar Tarjeta de Circulacion o presentarla vencida
+      </p>
+      <div class="flex flex-wrap">
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Nissan</span>
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Michoacan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card del Toyota Camry -->
+  <div class="flex max-w-lg rounded overflow-hidden shadow-lg mt-8 mx-4">
+    <img class="w-1/3 object-cover" src="../../assets/images/camry/camry1.jpeg" alt="Imagen del Toyota Camry">
+    <div class="w-2/3 px-4 py-2">
+      <div class="font-bold text-lg mb-2">PSS-678-A</div>
+      <p class="text-gray-700 text-sm">
+        2024-03-05 09:43:33
+      </p>
+      <p class="text-gray-700 text-sm">
+       <strong>Modelo:</strong> Toyota Camry
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Folio: </strong> 0428362
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Motivo: </strong> Traer parabrisas estrellados o polarizados, o con cualquier otro aditamiento que impida la visibilidad
+      </p>
+      <div class="flex flex-wrap">
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Toyota</span>
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Nuevo León</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex max-w-lg rounded overflow-hidden shadow-lg mt-8 mx-4">
+    <img class="w-1/3 object-cover" src="../../assets/images/focus/focus1.jpeg" alt="Imagen del Toyota Camry">
+    <div class="w-2/3 px-4 py-2">
+      <div class="font-bold text-lg mb-2">STV-471-O</div>
+      <p class="text-gray-700 text-sm">
+        2024-03-05 09:43:33
+      </p>
+      <p class="text-gray-700 text-sm">
+       <strong>Modelo:</strong> Ford Focus
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Folio: </strong> 0428362
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Motivo: </strong> Uso del telefono celular al conducir.
+      </p>
+      <div class="flex flex-wrap">
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Ford</span>
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Aguascalientes</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="flex max-w-lg rounded overflow-hidden shadow-lg mt-8 mx-4">
+    <img class="w-1/3 object-cover" src="../../assets/images/bmw/bm1.jpeg" alt="Imagen del Toyota Camry">
+    <div class="w-2/3 px-4 py-2">
+      <div class="font-bold text-lg mb-2">SMN-523-S</div>
+      <p class="text-gray-700 text-sm">
+        2024-03-05 09:43:33
+      </p>
+      <p class="text-gray-700 text-sm">
+       <strong>Modelo:</strong> BMW X6
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Folio: </strong> 0428489
+      </p>
+      <p class="text-gray-700 text-sm">
+        <strong>Motivo: </strong> No respetar rutas, horarios de maniobras de carga.
+      </p>
+      <div class="flex flex-wrap">
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">BMW</span>
+        <span class="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Michoacan</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
