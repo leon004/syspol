@@ -23,8 +23,8 @@ import { DataService } from './data.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatStepperModule} from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
-
 import { MatList, MatListModule, MatListItem, MatNavList } from '@angular/material/list';
+import { JuezComponent } from './juez/juez.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,8 @@ import { MatList, MatListModule, MatListItem, MatNavList } from '@angular/materi
     HomeComponent,
     InfractionComponent,
     ProfileComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    JuezComponent
   ],
   imports: [
     BrowserModule,

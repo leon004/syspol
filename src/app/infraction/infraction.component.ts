@@ -22,6 +22,7 @@ export class InfractionComponent implements OnInit {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   thirdFormGroup!: FormGroup;
+  fourthFormGroup!: FormGroup;
   isLinear = false;
   marcas: any[] = [];
   modelos: string[] = [];
@@ -65,7 +66,44 @@ export class InfractionComponent implements OnInit {
     this.thirdFormGroup = this._formBuilder.group({
       ubicacion: ['', Validators.required],
       fijarUbicacion: [''],
-      nombreInfractor:['']
+      nombreInfractor:['AUSENTE']
+    });
+
+    this.fourthFormGroup = this._formBuilder.group({
+      platesConfirmation: [{value: '', disabled: true}],
+      stateConfirmation: [{value: '', disabled: true}],
+      brandConfirmation: [{value: '', disabled: true}],
+      modelConfirmation: [{value: '', disabled: true}],
+      yearConfirmation: [{value: '', disabled: true}],
+      colorConfirmation: [{value: '', disabled: true}],
+      ubicacionConfirmation: [{value: '', disabled: true}],
+      nombreInfractorConfirmation: [{value: '', disabled: true}],
+      motivoConfirmation: [{value: '', disabled: true}]
+    });
+
+
+    this.firstFormGroup.valueChanges.subscribe(values => {
+      this.fourthFormGroup.patchValue({
+        platesConfirmation: values.plates,
+        stateConfirmation: values.state,
+        brandConfirmation: values.brand,
+        modelConfirmation: values.model,
+        yearConfirmation: values.year,
+        colorConfirmation: values.color
+      });
+    });
+
+    this.secondFormGroup.valueChanges.subscribe(values => {
+      this.fourthFormGroup.patchValue({
+        motivoConfirmation: values.reason
+      });
+    });
+
+    this.thirdFormGroup.valueChanges.subscribe(values => {
+      this.fourthFormGroup.patchValue({
+        ubicacionConfirmation: values.ubicacion,
+        nombreInfractorConfirmation: values.nombreInfractor
+      });
     });
 
     this.sharedService.currentPlates.subscribe(plates => {
@@ -150,6 +188,14 @@ deleteImage(index: number) {
       detalleMulta: [null]  // Puedes inicializar como null si el valor inicial realmente no existe
     });
   }
+
+  checkInfractorName() {
+    const infractorName = this.thirdFormGroup.get('nombreInfractor')!.value;
+    if (infractorName.trim() === '') {
+      this.thirdFormGroup.get('nombreInfractor')!.setValue('AUSENTE');
+    }
+  }
+
 
 
 }
