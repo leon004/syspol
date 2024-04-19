@@ -6,7 +6,7 @@
       <div class="flex items-center w-full">
 
         <div class="flex-grow pl-4">
-          <div class="mb-1 text-sm font-semibold text-gray-700">Placas</div>
+          <div class="mb-1 text-sm font-semibold text-gray-700">Placas/VIN</div>
           <input matInput formControlName="plates" required class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-500" placeholder="Placas del vehículo">
         </div>
       </div>
@@ -136,49 +136,60 @@
       <!-- Botones de Navegación del Stepper -->
       <div class="flex justify-between pt-4">
         <button mat-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Back</button>
-        <button mat-button matStepperNext class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next</button>
+        <button mat-button matStepperNext class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Next</button>
       </div>
     </form>
   </mat-step>
 
   <!-- infraction.component.html -->
-<mat-step [stepControl]="thirdFormGroup">
-  <ng-template matStepLabel>General</ng-template>
+  <mat-step [stepControl]="thirdFormGroup">
+    <ng-template matStepLabel>General</ng-template>
 
-  <!-- Ubicación -->
-  <mat-form-field appearance="fill">
-    <mat-label>Ubicación</mat-label>
-    <input matInput placeholder="Ubicación" formControlName="ubicacion" required>
-  </mat-form-field>
+    <div class="space-y-4 p-4">
 
-  <mat-checkbox formControlName="fijarUbicacion">Fijar ubicación manualmente</mat-checkbox>
+      <!-- Ubicación -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Ubicación</mat-label>
+        <input matInput placeholder="Ubicación" formControlName="ubicacion" required class="form-input mt-1 block w-full">
+      </mat-form-field>
 
-  <!-- Nombre del infractor -->
-  <mat-form-field appearance="fill">
-    <mat-label>Nombre del infractor (Opcional)</mat-label>
-    <input matInput placeholder="Nombre/AUSENTE" formControlName="nombreInfractor">
-  </mat-form-field>
+      <!-- Checkbox para fijar ubicación manualmente -->
+      <div class="flex items-center space-x-2">
+        <mat-checkbox formControlName="fijarUbicacion">Fijar ubicación manualmente</mat-checkbox>
+      </div>
 
-  <!-- Cargar fotos -->
-  <div class="image-upload-container">
-    <label for="imageUpload" class="image-upload-label">
-      <mat-icon>add_photo_alternate</mat-icon>
-      Agregar más fotos
-    </label>
-    <input type="file" id="imageUpload" multiple (change)="onImageUpload($event)" [attr.accept]="acceptFileTypes" hidden>
-  </div>
+      <!-- Nombre del infractor -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Nombre del infractor (Opcional)</mat-label>
+        <input matInput placeholder="Nombre/AUSENTE" formControlName="nombreInfractor" class="form-input mt-1 block w-full">
+      </mat-form-field>
 
-  <!-- Previsualización de imágenes cargadas -->
-  <div class="images-preview-container">
-    <div *ngFor="let image of images; let i = index" class="image-container">
-      <img [src]="image" class="preview-image">
-      <mat-icon class="delete-icon" (click)="deleteImage(i)">cancel</mat-icon>
+      <!-- Cargar fotos -->
+      <div class="image-upload-container flex items-center space-x-2">
+        <label for="imageUpload" class="image-upload-label cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+          <mat-icon>add_photo_alternate</mat-icon>
+          Agregar más fotos
+        </label>
+        <input type="file" id="imageUpload" multiple (change)="onImageUpload($event)" [attr.accept]="acceptFileTypes" hidden>
+      </div>
+
+      <!-- Previsualización de imágenes cargadas -->
+      <div class="images-preview-container grid grid-cols-3 gap-4 mt-4">
+        <div *ngFor="let image of images; let i = index" class="image-container relative">
+          <img [src]="image" class="preview-image max-w-full h-auto rounded-lg">
+          <mat-icon class="delete-icon absolute top-0 right-0 cursor-pointer p-1 bg-red-500 text-white rounded-full" (click)="deleteImage(i)">cancel</mat-icon>
+        </div>
+      </div>
+
+      <!-- Botones de navegación del stepper -->
+      <div class="flex justify-between mt-8">
+        <button mat-raised-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Atrás</button>
+        <button mat-raised-button matStepperNext class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Continuar</button>
+      </div>
+
     </div>
-  </div>
+  </mat-step>
 
-  <button mat-raised-button matStepperPrevious>Atrás</button>
-  <button mat-raised-button matStepperNext>Continuar</button>
-</mat-step>
 
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>

@@ -9,6 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { DataService } from '../data.service';
 import { map } from 'rxjs';
+import { SharedService } from '../shared.service';
+
 
 @Component({
   selector: 'app-infraction',
@@ -16,6 +18,7 @@ import { map } from 'rxjs';
   styleUrl: './infraction.component.css'
 })
 export class InfractionComponent implements OnInit {
+
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   thirdFormGroup!: FormGroup;
@@ -41,7 +44,7 @@ export class InfractionComponent implements OnInit {
   infraccionesMotivos: any[] = [];
 
 
-  constructor(private _formBuilder: FormBuilder, private dataService: DataService) {}
+  constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -63,6 +66,10 @@ export class InfractionComponent implements OnInit {
       ubicacion: ['', Validators.required],
       fijarUbicacion: [''],
       nombreInfractor:['']
+    });
+
+    this.sharedService.currentPlates.subscribe(plates => {
+      this.firstFormGroup.get('plates')!.setValue(plates);
     });
 
     this.dataService.getMarcas().subscribe(marcas => {

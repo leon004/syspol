@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +12,9 @@ export class HomeComponent {
   vehicleForm: FormGroup;
   inputLabel: string = "Placas";
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private sharedService: SharedService) {
     this.vehicleForm = this.fb.group({
-      inputField: ['', [Validators.required,
-      Validators.pattern(/^[a-zA-Z]{3}-?\d{3}-?[a-zA-Z]$/)
-    ]],
+      inputField: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]{3}-?\d{3}-?[a-zA-Z]$/)]],
       inputType: ['placas']
     });
 
@@ -37,6 +36,8 @@ export class HomeComponent {
   search() {
     if (this.vehicleForm.valid) {
       console.log('Form Data:', this.vehicleForm.value);
+      const plates = this.vehicleForm.get('inputField')!.value.replace(/-/g, '').toUpperCase();
+      this.sharedService.updatePlates(plates);
       this.router.navigate(['/infraction']);
     }
   }

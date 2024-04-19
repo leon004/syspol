@@ -103,3 +103,37 @@
   margin-right: 8px;
   vertical-align: middle;
 }
+
+/* Estilo para el botón de agregar fotos */
+.image-upload-label {
+  background-color: #2255A4; /* Un azul oscuro */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.image-upload-label:hover {
+  background-color: #1E4976; /* Un azul más oscuro para hover */
+}
+
+/* Estilo para el ícono de eliminar foto */
+.delete-icon {
+  background-color: #B00020; /* Un rojo oscuro */
+  color: white;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: background-color 0.3s ease;
+}
+
+.delete-icon:hover {
+  background-color: #7B1C2A; /* Un rojo más oscuro para hover */
+}
+
