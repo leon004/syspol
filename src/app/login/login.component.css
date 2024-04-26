@@ -1,0 +1,46 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.logo-container img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+.login-form .form-group {
+  margin-bottom: 1rem;
+}
+.login-form .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.login-form .btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: #011D4D;
+  color: white;
+  cursor: pointer;
+}
+.forgot-password {
+  display: block;
+  margin-top: 1rem;
+  color: #0056b3;
+  text-decoration: none;
+}
+h2{
+  color: #011D4D;
+}
