@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule,FormArray, FormGroup} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatButtonModule} from '@angular/material/button';
-import { CommonModule } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
-import { MatIconModule } from '@angular/material/icon';
 import { DataService } from '../data.service';
 import { map } from 'rxjs';
 import { SharedService } from '../shared.service';

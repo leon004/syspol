@@ -1,4 +1,5 @@
 [
+  { "value": "Otro-Extranjero", "viewValue": "Otro-Extranjero" },
   { "value": "Aguascalientes", "viewValue": "Aguascalientes" },
   { "value": "BajaCalifornia", "viewValue": "Baja California" },
   { "value": "BajaCaliforniaSur", "viewValue": "Baja California Sur" },
@@ -30,6 +31,6 @@
   { "value": "Tlaxcala", "viewValue": "Tlaxcala" },
   { "value": "Veracruz", "viewValue": "Veracruz" },
   { "value": "Yucatan", "viewValue": "Yucatán" },
-  { "value": "Zacatecas", "viewValue": "Zacatecas" },
-  { "value": "Otro-Extranjero", "viewValue": "Otro-Extranjero" }
+  { "value": "Zacatecas", "viewValue": "Zacatecas" }
+
 ]

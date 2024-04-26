@@ -27,6 +27,7 @@ import { MatList, MatListModule, MatListItem, MatNavList } from '@angular/materi
 import { JuezComponent } from './juez/juez.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ProfileComponent,
     BottomNavComponent,
     JuezComponent,
-    CarDetailComponent
+    CarDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
