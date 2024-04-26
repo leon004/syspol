@@ -11,6 +11,7 @@
         </div>
       </div>
 
+      <!-- Seleccionar Estado -->
       <div class="flex items-center w-full pt-8">
         <div class="flex-grow pl-4">
           <mat-form-field appearance="fill" class="w-full">
@@ -82,9 +83,10 @@
 </div>
 
 
-      <div>
-        <button mat-button matStepperNext>Continuar</button>
-      </div>
+      <!-- Botones de Navegación del Stepper Datos del vehiculo -->
+      <div class="flex justify-end mt-8"> 
+        <button mat-raised-button matStepperNext class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">Continuar</button>
+    </div>
     </form>
   </mat-step>
 
@@ -134,9 +136,9 @@
 
 
       <!-- Botones de Navegación del Stepper -->
-      <div class="flex justify-between pt-4">
-        <button mat-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Back</button>
-        <button mat-button matStepperNext class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">Next</button>
+      <div class="flex justify-between mt-8">
+        <button mat-raised-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Atrás</button>
+        <button mat-raised-button matStepperNext class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">Continuar</button>
       </div>
     </form>
   </mat-step>
@@ -243,11 +245,11 @@
       </table>
 
       <div class="flex justify-between mt-8">
-        <button mat-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Atrás</button>
-        <button mat-button class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded"
+        <button mat-raised-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Atrás</button>
+        <button mat-flat-button color="primary" matStepperNext class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded"
         (click)="registrarInfraccion()" [routerLink]="['/home']" routerLinkActive="router-link-active">
-  Registrar infracción
-</button>
+        Registrar infracción
+      </button>
       </div>
     </form>
   </mat-step>
