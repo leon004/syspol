@@ -38,6 +38,7 @@ export class InfractionComponent implements OnInit {
     // Agrega más colores según necesites
   ];
   infraccionesMotivos: any[] = [];
+  tiposInfraccion: any[] = [];
 
 
   constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService, private snackBar: MatSnackBar) {}
@@ -128,6 +129,9 @@ export class InfractionComponent implements OnInit {
     }));
     this.dataService.getMotivos().subscribe(data => {
       this.motivos = data;
+    });
+    this.dataService.getTiposInfraccion().subscribe(data => {
+      this.tiposInfraccion = data;
     });
   }
 

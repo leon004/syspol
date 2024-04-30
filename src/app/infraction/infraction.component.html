@@ -113,8 +113,8 @@
           <mat-form-field appearance="fill" class="w-full">
         <mat-label>Seleccione un motivo</mat-label>
         <mat-select formControlName="motivo">
-          <mat-option *ngFor="let motivo of motivos" [value]="motivo.id_motivo">
-            {{ motivo.motivo }}
+          <mat-option *ngFor="let tipo of tiposInfraccion" [value]="tipo.id_tipo">
+            {{ tipo.Articulo }}
           </mat-option>
         </mat-select>
       </mat-form-field>

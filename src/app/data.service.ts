@@ -40,6 +40,11 @@ export class DataService {
     );
   }
 
+  getTiposInfraccion(): Observable<any[]> {
+    return this.http.get<any[]>('/assets/infraccion_tipo.json');
+  }
+  
+
   getIncisosByFraccion(fraccionId: string) {
     return this.http.get<any[]>('/assets/infraccion_inciso.json').pipe(
       map(incisos => incisos.filter(i => i.fraccion === fraccionId))
