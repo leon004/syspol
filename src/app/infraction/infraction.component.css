@@ -137,3 +137,30 @@
   background-color: #7B1C2A; /* Un rojo más oscuro para hover */
 }
 
+/* Estilos para el select */
+.custom-select {
+  width: 100%;
+}
+
+/* Estilos para las opciones */
+.custom-option {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el indicador de color */
+.color-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* Icono de Material Icons para la bolita de color */
+
+/* Cambia el color de fondo de la bolita según el color seleccionado */
+.custom-option[selected] .color-indicator {
+  background-color: var(--selected-color); /* Cambia según tu diseño */
+}
+
+
