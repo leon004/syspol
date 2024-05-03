@@ -13,10 +13,10 @@ interface HistoricalEntry {
 })
 export class HistoricalComponent implements OnInit {
   historicalData: HistoricalEntry[] = [
-    { folio: 'Folio 0428360', code: 'PMT107 (PLACAS)', date: '2024-03-05 09:43:33' },
+    { folio: 'Folio 0428360', code: 'PMT107 (PFJ230C)', date: '2024-03-05 09:43:33' },
     // Repeticion de datos para ejemplo
-    { folio: 'Folio 0428360', code: 'PMT107 (PLACAS)', date: '2024-03-05 09:43:33' },
-    { folio: 'Folio 0428360', code: 'PMT107 (PLACAS)', date: '2024-03-05 09:43:33' },
+    { folio: 'Folio 0428360', code: 'PMT107 (PHA020D)', date: '2024-03-05 09:43:33' },
+    { folio: 'Folio 0428360', code: 'PMT107 (PFJ724E)', date: '2024-03-05 09:43:33' },
   ];
     constructor (){}
     ngOnInit(): void {

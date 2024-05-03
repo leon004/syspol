@@ -201,7 +201,7 @@ deleteImage(index: number) {
 
   openSnackBar(message: string){
     this.snackBar.open(message, 'Cerrar', {
-      duration: 3000,
+      duration: 5000,
     });
   }
 
