@@ -27,7 +27,8 @@ import { MatList, MatListModule, MatListItem, MatNavList } from '@angular/materi
 import { JuezComponent } from './juez/juez.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { LoginComponent } from './login/login.component';
+
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import { LoginComponent } from './login/login.component';
     BottomNavComponent,
     JuezComponent,
     CarDetailComponent,
-    LoginComponent
+
   ],
   imports: [
     BrowserModule,
@@ -61,7 +62,8 @@ import { LoginComponent } from './login/login.component';
     MatListModule,
     MatListItem,
     MatNavList,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule,
   ],
   providers: [
     provideAnimationsAsync()

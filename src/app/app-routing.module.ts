@@ -6,7 +6,7 @@ import { HistoricalComponent } from './historical/historical.component';
 import { InfractionComponent } from './infraction/infraction.component';
 import { JuezComponent } from './juez/juez.component';
 import { CarDetailComponent } from './car-detail/car-detail.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
