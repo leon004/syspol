@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+// car-detail.component.ts
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-car-detail',
   templateUrl: './car-detail.component.html',
-  styleUrl: './car-detail.component.css'
+  styleUrls: ['./car-detail.component.css']
 })
-export class CarDetailComponent{
+export class CarDetailComponent {
+  
+  images = [
+    'assets/images/Sentra/sentra1.jpeg',
+    'assets/images/Sentra/sentra2.jpeg',
+    'assets/images/Sentra/sentra3.jpeg'
+  ];
+  selectedImage: string = this.images[0];
+  currentIndex: number = 0;
 
-
-  constructor(private route: ActivatedRoute){}
-
-
-
+  selectImage(image: string) {
+    this.selectedImage = image;
+    this.currentIndex = this.images.indexOf(image);
+  }
+  
 }
