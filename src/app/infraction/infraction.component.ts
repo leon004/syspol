@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, Validators, FormsModule, ReactiveFormsModule,FormArray, FormGroup} from '@angular/forms';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FormBuilder, Validators, FormArray, FormGroup } from '@angular/forms';
 import { DataService } from '../data.service';
-import { map } from 'rxjs';
 import { SharedService } from '../shared.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { map } from 'rxjs/operators';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
   selector: 'app-infraction',
   templateUrl: './infraction.component.html',
-  styleUrl: './infraction.component.css'
+  styleUrls: ['./infraction.component.css']
 })
 export class InfractionComponent implements OnInit {
+  isCameraVisible: boolean = false;
+
+  @ViewChild('cameraPreview', { static: true }) cameraPreview!: ElementRef<HTMLVideoElement>;
+  @ViewChild('photoCanvas', { static: true }) photoCanvas!: ElementRef<HTMLCanvasElement>;
 
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
@@ -40,7 +45,7 @@ export class InfractionComponent implements OnInit {
   infraccionesMotivos: any[] = [];
 
 
-  constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService, private snackBar: MatSnackBar) {}
+  constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService, private snackBar: MatSnackBar, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -129,29 +134,70 @@ export class InfractionComponent implements OnInit {
     this.dataService.getMotivos().subscribe(data => {
       this.motivos = data;
     });
+
+    // Código para inicializar la cámara al cargar el componente
+
   }
-
-
 
   onImageUpload(event: Event) {
     const element = event.currentTarget as HTMLInputElement;
     let fileList: FileList | null = element.files;
-    if(fileList) {
-      for(let i = 0; i < fileList.length; i++){
-        if(i<6){ //Condicional para cargar maximo 6 imagenes
+
+    // Verificar si hay más de 6 imágenes
+    if (this.images.length >= 6) {
+      console.log('Ya se han agregado 6 imágenes. No se pueden agregar más.');
+      return;
+    }
+
+    if (fileList) {
+      for (let i = 0; i < fileList.length; i++) {
+        if (this.images.length + i < 6) { // Verificar que el total de imágenes no exceda 6
           const reader = new FileReader();
           reader.onload = (e: any) => {
             this.images.push(e.target.result);
           };
           reader.readAsDataURL(fileList[i]);
+        } else {
+          console.log('Ya se han agregado 6 imágenes. No se pueden agregar más.');
+          break;
         }
       }
     }
   }
 
-deleteImage(index: number) {
-  this.images.splice(index, 1);
-}
+
+  capturePhoto(): void {
+    const video = this.cameraPreview.nativeElement;
+    const canvas = this.photoCanvas.nativeElement;
+    const context = canvas.getContext('2d');
+
+    if (video && context) {
+      // Ajustar el tamaño del canvas al tamaño del video
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+
+      // Dibujar el frame actual del video en el canvas
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Obtener la imagen en formato base64 desde el canvas
+      const imageData = canvas.toDataURL('image/jpeg');
+
+      // Agregar la imagen capturada al array de imágenes
+      this.images.push(imageData);
+
+      // Limitar la cantidad de imágenes a 6
+      if (this.images.length > 6) {
+        this.images = this.images.slice(0, 6);
+      }
+    } else {
+      console.error('El elemento de video o el contexto del canvas no están disponibles.');
+    }
+  }
+
+
+  deleteImage(index: number) {
+    this.images.splice(index, 1);
+  }
 
   onMarcaSelected(marca: string){
     this.dataService.getModelosPorMarca(marca).subscribe(modelos => {
@@ -171,12 +217,11 @@ deleteImage(index: number) {
     this.infracciones().removeAt(index);
   }
 
-
-
   getInfraccionInfo(index: number): any {
     const selectedInfraccion = this.infracciones().at(index) as FormGroup;
     return selectedInfraccion.get('detalleMulta')!.value;
   }
+
   createInfraccionFormGroup(): FormGroup {
     return this._formBuilder.group({
       multa: ['', Validators.required],
@@ -200,6 +245,45 @@ deleteImage(index: number) {
       duration: 3000,
     });
   }
+  showCameraPreview: boolean = false;
+
+  toggleCameraPreview() {
+    this.showCameraPreview = !this.showCameraPreview;
+    this.isCameraVisible = this.showCameraPreview; // Actualiza la propiedad isCameraVisible
+
+    if (this.showCameraPreview) {
+      this.openCamera();
+    } else {
+      // Detener el video y limpiar la fuente del objeto de la cámara
+      const video = this.cameraPreview.nativeElement;
+      if (video.srcObject) {
+        const stream = video.srcObject as MediaStream;
+        const tracks = stream.getTracks();
+        tracks.forEach(track => track.stop());
+        video.srcObject = null;
+      }
+    }
+  }
 
 
+  openCamera() {
+    // Verificar si el navegador admite la API de medios
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Obtener la referencia al elemento de video
+      const video = this.cameraPreview.nativeElement;
+
+      // Solicitar acceso a la cámara
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+          // Asignar el flujo de la cámara al elemento de video
+          video.srcObject = stream;
+        })
+        .catch((error) => {
+          // Manejar errores de acceso a la cámara
+          console.error('Error al acceder a la cámara:', error);
+        });
+    } else {
+      console.error('El navegador no admite la API de medios.');
+    }
+  }
 }

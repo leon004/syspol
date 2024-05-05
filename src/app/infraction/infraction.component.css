@@ -54,6 +54,8 @@
   background-color: #e0e0e0; /* Un poco más oscuro al pasar el mouse */
 }
 
+
+
 .images-preview-container {
   display: flex;
   flex-wrap: wrap;
@@ -119,6 +121,25 @@
 .image-upload-label:hover {
   background-color: #1E4976; /* Un azul más oscuro para hover */
 }
+
+/* Estilo para el segundo botón de agregar fotos */
+.custom-button {
+  background-color: #2255A4; /* Un azul oscuro */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #1E4976; /* Un azul más oscuro para hover */
+}
+
+
+
 
 /* Estilo para el ícono de eliminar foto */
 .delete-icon {
