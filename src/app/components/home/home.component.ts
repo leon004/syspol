@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SharedService } from '../shared.service';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-home',

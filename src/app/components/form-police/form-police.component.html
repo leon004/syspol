@@ -1,0 +1,60 @@
+<div class="container mx-auto mt-8">
+  <h2 class="text-2xl font-bold mb-4">Registrar Nueva Infracción</h2>
+  <form [formGroup]="infractionForm" (ngSubmit)="submit()" class="space-y-4">
+    <div class="flex flex-col">
+      <label class="font-semibold">ID del Policía:</label>
+      <input formControlName="policiaId" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Nombre de Usuario del Policía:</label>
+      <input formControlName="policiaUsername" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Placas:</label>
+      <input formControlName="placas" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">País:</label>
+      <input formControlName="pais" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Estado:</label>
+      <input formControlName="estado" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Marca:</label>
+      <input formControlName="marca" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Modelo:</label>
+      <input formControlName="modelo" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Año:</label>
+      <input formControlName="year" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Color:</label>
+      <input formControlName="color" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Ubicación:</label>
+      <input formControlName="ubicacion" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Nombre del Infractor (opcional):</label>
+      <input formControlName="nombreInfractor" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Motivo de la Multa:</label>
+      <input formControlName="motivoDeMulta" class="p-2 border rounded">
+    </div>
+    <div class="flex flex-col">
+      <label class="font-semibold">Imagenes (URLs, separadas por comas):</label>
+      <input formControlName="imagenes" class="p-2 border rounded">
+    </div>
+    <div class="buttons mt-6">
+      <button type="submit" [disabled]="!infractionForm.valid" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50">Registrar Infracción</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,246 @@
+<mat-stepper [linear]="isLinear" #stepper>
+  <!-- Primer paso: Datos del vehículo -->
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Vehículo</ng-template>
+
+      <!-- Placas -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Placas/VIN</mat-label>
+        <input matInput formControlName="plates" placeholder="Placas del vehículo" required />
+      </mat-form-field>
+
+      <!-- Estado -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Seleccione un estado</mat-label>
+        <mat-select formControlName="state">
+          <mat-option *ngFor="let estado of estados" [value]="estado.value">
+            {{ estado.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Marca -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Seleccione una marca</mat-label>
+        <mat-select formControlName="brand">
+          <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+            {{ marca.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Modelo -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Seleccione un modelo</mat-label>
+        <mat-select formControlName="model">
+          <mat-option *ngFor="let modelo of modelos" [value]="modelo">
+            {{ modelo }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Año -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Seleccione un año</mat-label>
+        <mat-select formControlName="year">
+          <mat-option *ngFor="let year of years" [value]="year.value">
+            {{ year.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Color -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Seleccione un color</mat-label>
+        <mat-select formControlName="color">
+          <mat-option *ngFor="let color of colores" [value]="color.value">
+            <span [style.background-color]="color.value" class="color-indicator"></span>
+            {{ color.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Botón de continuar -->
+      <button mat-button matStepperNext>Continuar</button>
+    </form>
+  </mat-step>
+
+  <!-- Segundo paso: Infracciones -->
+  <mat-step [stepControl]="secondFormGroup" label="Infracciones">
+    <form [formGroup]="secondFormGroup">
+      <!-- Campo de Motivo de la Multa -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Motivo de la multa</mat-label>
+        <textarea matInput formControlName="reason" placeholder="Describe el motivo"></textarea>
+      </mat-form-field>
+
+      <!-- Lista de infracciones -->
+      <div formArrayName="infracciones">
+        <div *ngFor="let infraccion of infracciones().controls; let i = index" [formGroupName]="i" class="flex items-center space-x-2">
+          <mat-form-field appearance="fill" class="w-full">
+            <mat-label>Seleccione un motivo</mat-label>
+            <mat-select formControlName="motivo">
+              <mat-option *ngFor="let motivo of motivos" [value]="motivo.id_motivo">
+                {{ motivo.motivo }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- Botón para eliminar infracción -->
+          <button mat-icon-button (click)="removeInfraccion(i)" class="text-red-500">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Botón para agregar infracción -->
+      <button mat-mini-fab color="primary" (click)="addInfraccion()">
+        <mat-icon>add</mat-icon>
+      </button>
+
+      <!-- Botones de navegación -->
+      <div class="flex justify-between pt-4">
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Tercer paso: Ubicación e información del infractor -->
+  <mat-step [stepControl]="thirdFormGroup">
+    <form [formGroup]="thirdFormGroup">
+      <!-- Ubicación -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Ubicación</mat-label>
+        <input matInput formControlName="ubicacion" placeholder="Ubicación" required />
+      </mat-form-field>
+
+      <!-- Fijar ubicación manualmente -->
+      <mat-checkbox formControlName="fijarUbicacion">Fijar ubicación manualmente</mat-checkbox>
+
+      <!-- Nombre del infractor -->
+      <mat-form-field appearance="fill" class="w-full">
+        <mat-label>Nombre del infractor</mat-label>
+        <input matInput formControlName="nombreInfractor" placeholder="Nombre/AUSENTE" />
+      </mat-form-field>
+
+      <!-- Cargar fotos -->
+      <div class="image-upload-container">
+        <label for="imageUpload" class="image-upload-label">
+          <mat-icon>add_photo_alternate</mat-icon>
+          Agregar más fotos
+        </label>
+        <input type="file" id="imageUpload" multiple (change)="onImageUpload($event)" [attr.accept]="acceptFileTypes" hidden />
+      </div>
+
+      <!-- Previsualización de imágenes cargadas -->
+      <div class="images-preview-container grid grid-cols-3 gap-4 mt-4">
+        <div *ngFor="let image of images; let i = index" class="relative">
+          <img [src]="image" class="preview-image rounded-lg" />
+          <mat-icon class="delete-icon" (click)="deleteImage(i)">cancel</mat-icon>
+        </div>
+      </div>
+
+      <!-- Botones de navegación -->
+      <div class="flex justify-between pt-4">
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!-- Cuarto paso: Confirmación de datos -->
+  <mat-step [stepControl]="fourthFormGroup">
+    <ng-template matStepLabel>Confirmación</ng-template>
+    <form [formGroup]="fourthFormGroup">
+      <h2 class="text-xl font-bold text-center">Confirmación de datos</h2>
+
+      <table class="min-w-full shadow-sm divide-y divide-gray-200">
+        <tbody class="bg-white divide-y divide-gray-300">
+          <!-- ID del Policía -->
+          <tr>
+            <th>ID del Policía</th>
+            <td>{{ policiaId }}</td>
+          </tr>
+          <tr>
+            <th>Usuario del Policía</th>
+            <td>{{ policiaUsername }}</td>
+          </tr>
+
+          <!-- Placas, Estado, Marca, Modelo -->
+          <tr>
+            <th>Placas/VIN</th>
+            <td><input matInput formControlName="platesConfirmation" readonly /></td>
+          </tr>
+          <tr>
+            <th>Estado</th>
+            <td><input matInput formControlName="stateConfirmation" readonly /></td>
+          </tr>
+          <tr>
+            <th>Marca</th>
+            <td><input matInput formControlName="brandConfirmation" readonly /></td>
+          </tr>
+          <tr>
+            <th>Modelo</th>
+            <td><input matInput formControlName="modelConfirmation" readonly /></td>
+          </tr>
+
+          <!-- Año, Color, Ubicación -->
+          <tr>
+            <th>Año</th>
+            <td><input matInput formControlName="yearConfirmation" readonly /></td>
+          </tr>
+          <tr>
+            <th>Color</th>
+            <td><input matInput formControlName="colorConfirmation" readonly /></td>
+          </tr>
+          <tr>
+            <th>Ubicación</th>
+            <td><input matInput formControlName="ubicacionConfirmation" readonly /></td>
+          </tr>
+
+          <!-- Nombre del Infractor -->
+          <tr>
+            <th>Nombre del Infractor</th>
+            <td><input matInput formControlName="nombreInfractorConfirmation" readonly /></td>
+          </tr>
+
+          <!-- Motivo de la Multa -->
+          <tr>
+            <th>Motivo de la Multa</th>
+            <td><input matInput formControlName="motivoConfirmation" readonly /></td>
+          </tr>
+
+          <!-- Fecha y Hora -->
+          <tr>
+            <th>Fecha</th>
+            <td>{{ currentDate | date:'longDate' }}</td>
+          </tr>
+          <tr>
+            <th>Hora</th>
+            <td>{{ currentDate | date:'shortTime' }}</td>
+          </tr>
+
+          <!-- Imágenes -->
+          <tr>
+            <th>Imágenes</th>
+            <td>
+              <div class="images-preview-container grid grid-cols-3 gap-4 mt-4">
+                <div *ngFor="let image of images; let i = index" class="relative">
+                  <img [src]="image" class="preview-image rounded-lg" />
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Botones -->
+      <div class="flex justify-between mt-8">
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button (click)="registrarInfraccion()">Registrar infracción</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-stepper>
