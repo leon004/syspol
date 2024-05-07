@@ -42,6 +42,9 @@ export class HomeComponent {
     }
   }
 
+  cancel() {
+    this.vehicleForm.reset();
+  }
   onInputChange() {
     this.vehicleForm.get('inputField')!.setValue('');
   }

@@ -4,6 +4,8 @@ import { DataService } from '../data.service';
 import { map } from 'rxjs';
 import { SharedService } from '../shared.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -41,7 +43,7 @@ export class InfractionComponent implements OnInit {
   tiposInfraccion: any[] = [];
 
 
-  constructor(private _formBuilder: FormBuilder, private dataService: DataService, private sharedService: SharedService, private snackBar: MatSnackBar) {}
+  constructor(private _formBuilder: FormBuilder,private router: Router, private dataService: DataService, private sharedService: SharedService, private snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -198,6 +200,10 @@ deleteImage(index: number) {
   registrarInfraccion(){
     this.openSnackBar("Datos enviados correctamente");
   }
+  cancel() {
+    this.router.navigate(['/']); // Ruta a la página de inicio (puedes cambiarla según tu estructura de rutas)
+  }
+  
 
   openSnackBar(message: string){
     this.snackBar.open(message, 'Cerrar', {

@@ -90,9 +90,10 @@
 
 
       <!-- Botones de Navegación del Stepper Datos del vehiculo -->
-      <div class="flex justify-end mt-8"> 
+      <div class="flex justify-between mt-8">
+        <button mat-raised-button matStepperPrevious class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" (click)="cancel()">Cancelar</button>
         <button mat-raised-button matStepperNext class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">Continuar</button>
-    </div>
+      </div>
     </form>
   </mat-step>
 
