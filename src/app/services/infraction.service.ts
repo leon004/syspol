@@ -32,7 +32,7 @@ export class InfractionService {
 
   // Método helper para crear headers con autorización
   private createAuthorizationHeader(): HttpHeaders {
-    const token = localStorage.getItem('userToken');
+    const token = localStorage.getItem('token');
     return new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${token}`
@@ -58,6 +58,14 @@ export class InfractionService {
   // Función para crear una nueva infracción
   createInfraction(infraction: any): Observable<any> {
     return this.http.post(this.baseUrl, infraction, {
+      headers: this.createAuthorizationHeader()
+    }).pipe(
+      catchError(this.handleError)
+    );
+  }
+   // Nuevo método para obtener todas las infracciones
+   getAllInfractions(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/`, {
       headers: this.createAuthorizationHeader()
     }).pipe(
       catchError(this.handleError)
