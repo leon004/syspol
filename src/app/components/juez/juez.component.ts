@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { InfractionService } from '../../services/infraction.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class JuezComponent {
   searchText: string = '';
   infractions: any[] = [];
   filteredInfractions: any[] = [];
-  constructor(private infractionService: InfractionService) {}
+  constructor(private infractionService: InfractionService, private router: Router) {}
 
   ngOnInit() {
     this.loadInfractions();
@@ -67,5 +68,8 @@ export class JuezComponent {
     this.filteredInfractions = this.infractions.sort((a, b) => {
       return a.ubicacion.localeCompare(b.ubicacion);
     });
+  }
+  viewInfractionDetails(infraction: any) {
+    this.router.navigate(['/car-detail'], { state: { infraction: infraction } });
   }
 }

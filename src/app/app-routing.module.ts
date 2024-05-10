@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'infraction', component: InfractionComponent, canActivate: [AuthGuard] },
   { path: 'juez', component: JuezComponent, canActivate: [AuthGuard] },
-  { path: 'car-detail', component: CarDetailComponent, canActivate: [AuthGuard] },
+  { path: 'car-detail/:id', component: CarDetailComponent, canActivate: [AuthGuard] },
   { path: 'form-police', component: FormPoliceComponent, canActivate: [AuthGuard] }
 ];
 

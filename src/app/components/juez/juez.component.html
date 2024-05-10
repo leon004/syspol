@@ -29,7 +29,8 @@
 
 <!-- Envoltorio para todas las cards -->
 <div class="flex flex-row flex-wrap justify-center items-stretch  bg-gray-100 pb-8 ">
-  <div *ngFor="let infraction of infractions" class="flex max-w-lg rounded overflow-hidden shadow-lg mt-8 mx-8" [routerLink]="['/car-detail']" routerLinkActive="router-link-active">
+  <div *ngFor="let infraction of infractions" class="flex max-w-lg rounded overflow-hidden shadow-lg mt-8 mx-8"
+  [routerLink]="['/car-detail', infraction.id]" routerLinkActive="router-link-active">
     <!-- Contenido de cada tarjeta de infracción -->
     <img class="w-1/3 object-cover" src="{{ infraction.imagenes }}" alt="Imagen del vehículo">
     <div class="w-2/3 px-4 py-2">
